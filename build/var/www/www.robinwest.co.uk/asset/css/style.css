@@ -2,9 +2,27 @@ body{
 	font-size:16px;
 	margin:0;
 	padding:0;
-	background: url(../img/background-placeholder.jpg) no-repeat center center fixed;
+	background: #273d47 url(../img/background-placeholder.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+svg.logo{
+	fill:#fff;
+	width:160px;
+	height:160px;
+}
+svg.comingSoon{
+	fill:#fff;
+	width:680px;
+	height:300px;
+}
+#logoContainer{
+	position:absolute;
+	top:3em;
+	left:3em;
+}
+#comingSoonContainer{
+	margin:12em auto 0;
 }
