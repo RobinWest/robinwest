@@ -10,19 +10,24 @@ body{
 }
 svg.logo{
 	fill:#fff;
-	width:160px;
-	height:160px;
+	stroke:#fff;
+	width:100%;
+	height:100%;
 }
 svg.comingSoon{
 	fill:#fff;
-	width:680px;
-	height:300px;
+	stroke:#fff;
+	width:100%;
 }
 #logoContainer{
 	position:absolute;
+	width:160px;
+	height:160px;
 	top:3em;
 	left:3em;
 }
 #comingSoonContainer{
+	width:610px;
+	height:340px;
 	margin:12em auto 0;
 }
