@@ -1,6 +1,6 @@
 <?php
 	$logo 		= 'asset/img/logo-simple-opt.svg';
-	$comingSoon = 'asset/img/comingsoon-opt.svg';
+	$comingSoon = 'asset/img/comingsoon.svg';
 ?>
 <!DOCTYPE html>
 <html lang="en">
