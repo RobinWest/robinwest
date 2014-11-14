@@ -10,7 +10,8 @@ html, body{
 	margin:0;
 	padding:0;
 }
-body{
+
+section.home{
 	background: #273d47 url(../img/background-placeholder.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -23,81 +24,116 @@ section{
 	height:100%;
 	width:100%;
 }
-#logo-container{
+.logo-container{
 	height:75%;
 	max-height:75%;
 	padding:2em;
 }
-#logo-container svg{
+.logo-container svg{
 	max-height:100%;
 	fill:#fff;
 }
-#information-container{
+.information-container{
 	height:25%;
 	max-height:25%;
 	padding:2em;
 	margin:0 auto;
 }
-#information-container svg{
+.information-container svg{
 	max-height:100%;
 	fill:#fff;
 }
+
 .nav-container{
-	background-color:red;
-	padding:2em;
-}
-.nav-container ul{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-.nav-container ul li{
-	float:left;
-	width:20%;
+	background-color:#fff;
 	text-align:center;
 }
-.gallery-container{
-	/*background:url(../img/me.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;*/
+.nav-container p,
+.nav-container h3{
+	margin:0;
+}
+.nav-container p{
+	color:#517C97;
+}
+.navitem{
+	cursor:pointer;
+}
+.navitem:hover{
+	border-bottom:0.4em solid #EDDEDE;
+}
+.navitem.selected{
+	border-bottom:0.4em solid #B17070;
+}
+
+.content-container{
+	height:auto;
 }
 .gallery-container img{
 	width:100%;
+	height:auto;
 }
 .description-container{
 	position:relative;
 	padding:1em;
 	background-color:#fff;
 }
-.description-container .tag{
-	position:relative;
+
+.description-container .corner{
+	position:absolute;
 	height:6em;
 	width:6em;
-	left:-7em;
-	top:0;
 	border-style:solid;
+	right:0;
+	top:-6em;
 	border-width:0 0 6em 6em;
-	border-color:transparent transparent red transparent;
+	border-color:transparent transparent #fff transparent;
 }
 
 
 /* sm */
 @media screen and (min-width: 35.5em){
+	body{font-size:0.8em;}
 }
 /* md */
 @media screen and (min-width: 48em){
-	body{font-size:0.8em;}
+	body{font-size:1em;}
 }
 /* lg */
 @media screen and (min-width: 64em){
+	body{font-size:1.2em;}
 	section .pure-g{
 		height:100%;
 		max-height:100%;
 	}
+	.nav-container{
+		height:10%;
+		padding-top:1em;
+	}
+	.content-container{
+		height:90%;
+	}
+	.gallery-container{
+		overflow:hidden;
+		height:100%;
+	}
+	.gallery-container img{
+		width:auto;
+		height:100%;
+	}
+	.description-container{
+		/*padding:2em;*/
+	}
+	.description-container .corner{
+		top:auto;
+		right:auto;
+		left:-6em;
+		bottom:0;
+		border-width:0 0 6em 6em;
+		border-color:transparent transparent #fff transparent;
+	}
+
+
 }
 /* xl */
 @media screen and (min-width: 80em){
-	body{font-size:1em;}
 }
