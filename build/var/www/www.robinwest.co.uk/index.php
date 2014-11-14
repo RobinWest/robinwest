@@ -12,19 +12,19 @@
 	<link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-	<? /*<div class="responsiveHelper">
+	<?php /*<div class="responsiveHelper">
 		<div class="responsiveHelper-sm">Small</div>
 		<div class="responsiveHelper-md">Medium</div>
 		<div class="responsiveHelper-lg">Large</div>
 		<div class="responsiveHelper-xl">X Large</div>
 	</div>*/?>
 	<div id="logoContainer">
-		<? include($logo); ?>
+		<?php include($logo); ?>
 	</div>
 	<div class="pure-g">
 		<div class="pure-u-1">
 			<div id="comingSoonContainer">
-				<? include($comingSoon); ?>
+				<?php include($comingSoon); ?>
 			</div>
 		</div>
 	</div>
