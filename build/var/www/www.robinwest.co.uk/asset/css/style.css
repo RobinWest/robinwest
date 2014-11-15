@@ -5,6 +5,7 @@ html {
 	box-sizing: inherit;
 }
 html, body{
+	font-size:14px;
 	width:100%;
 	height:100%;
 	margin:0;
@@ -30,16 +31,30 @@ section{
 	padding:2em;
 }
 .logo-container svg{
+	width:100%;
 	max-height:100%;
 	fill:#fff;
 }
-.information-container{
+
+#workSection{
 	height:25%;
 	max-height:25%;
 	padding:2em;
-	margin:0 auto;
 }
-.information-container svg{
+#workSection:hover{
+	background-color:rgba(255,255,255,0.2);
+}
+#workSection.active{
+	background-color:rgba(255,255,255,0.4);
+	-webkit-transform: 	translateY(40em);
+	-ms-transform: 		translateY(40em);
+	transform:			translateY(40em);
+	opacity:0;
+	transition: opacity 0.1s, transform 0.3s ease;
+}
+#workSection svg{
+	width:100%;
+	/*margin:0 auto;*/
 	max-height:100%;
 	fill:#fff;
 }
@@ -55,8 +70,24 @@ section{
 .nav-container p{
 	color:#517C97;
 }
+
+.mobile-nav{
+
+}
+.navitem{
+	display:none;
+}
+.navitem.selected{
+	display:block;
+}
+
+.desktop-nav{
+	display:none;
+}
+
 .navitem{
 	cursor:pointer;
+	padding:1em;
 }
 .navitem:hover{
 	border-bottom:0.4em solid #EDDEDE;
@@ -92,11 +123,15 @@ section{
 
 /* sm */
 @media screen and (min-width: 35.5em){
-	body{font-size:0.8em;}
 }
 /* md */
 @media screen and (min-width: 48em){
 	body{font-size:1em;}
+	.mobile-nav{
+		display:none;
+	}
+	.desktop-nav{
+	}
 }
 /* lg */
 @media screen and (min-width: 64em){
@@ -109,6 +144,10 @@ section{
 		height:10%;
 		padding-top:1em;
 	}
+	.navitem{
+		padding:0;
+	}
+
 	.content-container{
 		height:90%;
 	}
@@ -121,6 +160,7 @@ section{
 		height:100%;
 	}
 	.description-container{
+		height:100%;
 		/*padding:2em;*/
 	}
 	.description-container .corner{
