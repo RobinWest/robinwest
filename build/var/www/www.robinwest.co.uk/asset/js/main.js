@@ -9,6 +9,9 @@
 		this.workTab = 1;
 
 		this.setTab = function(tab){
+			if(tab > 5 || tab < 1)
+				return;
+
 			this.workTab = tab;
 		}
 		this.isSet = function(tab){
@@ -25,12 +28,11 @@ $(document).ready(function(){
 	});
 
 	// TODO genericify the selector
-	$('#workSection').on('click', function(e){
+	$('#toWork').on('click', function(e){
 		var $el 	= $(e.currentTarget),
-			amount 	= $('.work').offset().top;
+			amount 	= $('#work').offset().top;
 
 		$el.addClass('active');
-		console.log($el);
 
 		$('html,body').animate({
 			scrollTop: amount

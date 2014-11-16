@@ -25,38 +25,32 @@ section{
 	height:100%;
 	width:100%;
 }
+svg{
+	width:100%;
+	max-height:100%;
+	fill:#fff;
+}
 .logo-container{
 	height:75%;
 	max-height:75%;
 	padding:2em;
 }
-.logo-container svg{
-	width:100%;
-	max-height:100%;
-	fill:#fff;
-}
 
-#workSection{
+#toWork{
 	height:25%;
 	max-height:25%;
 	padding:2em;
 }
-#workSection:hover{
+#toWork:hover{
 	background-color:rgba(255,255,255,0.2);
 }
-#workSection.active{
+#toWork.active{
 	background-color:rgba(255,255,255,0.4);
 	-webkit-transform: 	translateY(40em);
 	-ms-transform: 		translateY(40em);
 	transform:			translateY(40em);
 	opacity:0;
 	transition: opacity 0.1s, transform 0.3s ease;
-}
-#workSection svg{
-	width:100%;
-	/*margin:0 auto;*/
-	max-height:100%;
-	fill:#fff;
 }
 
 .nav-container{
@@ -71,42 +65,43 @@ section{
 	color:#517C97;
 }
 
-.mobile-nav{
-
-}
-.navitem{
+.nav-item{
 	display:none;
 }
-.navitem.selected{
-	display:block;
+.nav-item.selected{
+	display:inline-block;
 }
 
-.desktop-nav{
-	display:none;
-}
-
-.navitem{
+.nav-item{
+	height:100%;
 	cursor:pointer;
 	padding:1em;
 }
-.navitem:hover{
+.nav-item:hover{
 	border-bottom:0.4em solid #EDDEDE;
 }
-.navitem.selected{
+.nav-item.selected{
 	border-bottom:0.4em solid #B17070;
 }
 
 .content-container{
 	height:auto;
 }
+/* TODO change this for square images */
 .gallery-container img{
 	width:100%;
 	height:auto;
 }
 .description-container{
 	position:relative;
-	padding:1em;
+}
+.description-container article{
+	padding:2em;
 	background-color:#fff;
+}
+article.contact-container{
+	color:#fff;
+	background-color:#5FAC53;
 }
 
 .description-container .corner{
@@ -127,11 +122,6 @@ section{
 /* md */
 @media screen and (min-width: 48em){
 	body{font-size:1em;}
-	.mobile-nav{
-		display:none;
-	}
-	.desktop-nav{
-	}
 }
 /* lg */
 @media screen and (min-width: 64em){
@@ -142,10 +132,14 @@ section{
 	}
 	.nav-container{
 		height:10%;
-		padding-top:1em;
+		padding-top:1.2em;
 	}
-	.navitem{
+	.nav-control{
+		display:none;
+	}
+	.nav-item{
 		padding:0;
+		display:inline-block;
 	}
 
 	.content-container{
@@ -156,12 +150,15 @@ section{
 		height:100%;
 	}
 	.gallery-container img{
+		min-width:100%;
 		width:auto;
 		height:100%;
 	}
 	.description-container{
 		height:100%;
-		/*padding:2em;*/
+	}
+	.description-container article{
+		height:50%;
 	}
 	.description-container .corner{
 		top:auto;
@@ -169,9 +166,8 @@ section{
 		left:-6em;
 		bottom:0;
 		border-width:0 0 6em 6em;
-		border-color:transparent transparent #fff transparent;
+		border-color:transparent transparent #5FAC53 transparent;
 	}
-
 
 }
 /* xl */
