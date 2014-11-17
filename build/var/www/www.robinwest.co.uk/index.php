@@ -61,19 +61,19 @@
 				<div class="pure-u-1 pure-u-lg-1-2 gallery-container">
 					<img ng-show="tab.isSet(1)" src="asset/img/me.jpg">
 					<img ng-show="tab.isSet(2)" src="asset/img/sut-logo.jpg">
-					<img ng-show="tab.isSet(3)" src="asset/img/sms-manager.jpg">
+					<img ng-show="tab.isSet(3)" src="asset/img/audiences.jpg">
 					<img ng-show="tab.isSet(4)" src="asset/img/sms-manager.jpg">
 					<img ng-show="tab.isSet(5)" src="asset/img/sut-labs.jpg">
 				</div>
 				<div class="pure-u-1 pure-u-lg-1-2 description-container">
 					<article>
 						<div ng-show="tab.isSet(1)" class="description">
-							<h2>Hi, I'm Robin&hellip;</h2>
+							<h1>Hi, I'm Robin&hellip;</h1>
 							<p>I'm a front end web developer specialising in UI and UX design.</p>
 						</div>
 						
 						<div ng-show="tab.isSet(2)" class="description">
-							<h2>Sign-Up.to</h2>
+							<h1>Sign-Up.to</h1>
 							<p>I am currently working at Sign-Up.to - a leading self-service permission marketing platform. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our user interfaces.</p>
 							<ul>
 								<li>Implemented a combination of design studio sessions, early paper prototyping, and iterative, usability-lead development for new applications.</li>
@@ -94,19 +94,28 @@
 								<h1>Contact me</h1>
 							</div>
 							<div class="pure-u-1-3">
-								<svg viewBox="0 0 300 300">
-									<use xlink:href="asset/img/mail.svg#mail"></use>
-								</svg>
+								<a href="mailto:robermak@gmail.com" target="_blank">
+									<svg viewBox="0 0 300 300">
+										<use xlink:href="asset/img/icons.svg#mail"></use>
+									</svg>
+								</a>
+								<a href="mailto:robermak@gmail.com" target="_blank">robermak@gmail.com</a>
 							</div>
 							<div class="pure-u-1-3">
-								<svg viewBox="0 0 300 300">
-									<use xlink:href="asset/img/twitter.svg#twitter"></use>
-								</svg>
+								<a href="https://twitter.com/SirRobinWest" target="_blank">
+									<svg viewBox="0 0 300 300">
+										<use xlink:href="asset/img/icons.svg#twitter"></use>
+									</svg>
+								</a>
+								<a href="https://twitter.com/SirRobinWest" target="_blank">@SirRobinWest</a>
 							</div>
 							<div class="pure-u-1-3">
-								<svg viewBox="0 0 300 300">
-									<use xlink:href="asset/img/github.svg#github"></use>
-								</svg>
+								<a href="https://github.com/RobinWest" target="_blank">
+									<svg viewBox="0 0 300 300">
+										<use xlink:href="asset/img/icons.svg#github"></use>
+									</svg>
+								</a>
+								<a href="https://github.com/RobinWest" target="_blank">RobinWest</a>
 							</div>
 						</div>
 					</article>

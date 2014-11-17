@@ -99,10 +99,6 @@ svg{
 	padding:2em;
 	background-color:#fff;
 }
-article.contact-container{
-	color:#fff;
-	background-color:#5FAC53;
-}
 
 .description-container .corner{
 	position:absolute;
@@ -114,7 +110,23 @@ article.contact-container{
 	border-width:0 0 6em 6em;
 	border-color:transparent transparent #fff transparent;
 }
-
+article.contact-container{
+	color:#fff;
+	background-color:#5FAC53;
+}
+.contact-container svg{
+	width:50%;
+	display:block;
+	margin: 0 auto;
+}
+.contact-container a{
+	display:block;
+	text-align:center;
+	color:#fff;
+}
+.contact-container a:hover{
+	color:#ccc;
+}
 
 /* sm */
 @media screen and (min-width: 35.5em){
@@ -152,7 +164,7 @@ article.contact-container{
 	.gallery-container img{
 		min-width:100%;
 		width:auto;
-		height:100%;
+		min-height:100%;
 	}
 	.description-container{
 		height:100%;
