@@ -9,6 +9,7 @@ html {
 }
 html, body{
 	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
 	color:#282C31;
 	width:100%;
 	height:100%;
@@ -16,17 +17,26 @@ html, body{
 	padding:0;
 }
 h1,h2,h3,h4,h5{
-	font-family:Consolas, Arial, sans-serif;
+	font-family:"Consolas", Courier, monospace;
 }
 
-section.home{
+section#home,
+#main-image{
 	background: #273d47 url(../img/background-placeholder.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-section{
+#main-image{
+	opacity:0;
+	transition: opacity 0.5s;
+}
+#main-image.active{
+	opacity:1;
+}
+section,
+#main-image{
 	position:relative;
 	max-height:100%;
 	height:100%;
@@ -46,7 +56,7 @@ svg{
 #toWork{
 	height:25%;
 	max-height:25%;
-	padding:2em;
+	padding:1.4em;
 }
 #toWork:hover{
 	background-color:rgba(255,255,255,0.2);
@@ -61,20 +71,28 @@ svg{
 }
 
 .nav-container{
-	background-color:#fff;
+	background-color:#eee;
 	text-align:center;
 }
-
+.nav-control{
+	width:30%;
+	margin:1.4em auto;
+}
+.nav-control svg{
+	cursor:pointer;
+	fill:#282C31;
+}
+.nav-control.inactive svg{
+	fill:#CED1D7;
+}
 .nav-item{
 	display:none;
 }
 .nav-item.selected{
 	display:inline-block;
 }
-
 .nav-item{
-	height:100%;
-	cursor:pointer;
+	min-height:100%;
 	padding:1em;
 }
 .nav-item:hover{
@@ -97,7 +115,6 @@ svg{
 .content-container{
 	height:auto;
 }
-/* TODO change this for square images */
 .gallery-container img{
 	width:100%;
 	height:auto;
@@ -155,17 +172,20 @@ svg{
 
 /* sm */
 @media screen and (min-width: 35.5em){
+	body{font-size:1.2em;}
 }
 /* md */
 @media screen and (min-width: 48em){
-	body{font-size:1em;}
 }
 /* lg */
 @media screen and (min-width: 64em){
-	body{font-size:1.2em;}
+	body{font-size:1.4em;}
 }
 /* xl */
 @media screen and (min-width: 80em){
+	.xl-hide{
+		display:none;
+	}
 	section .pure-g{
 		height:100%;
 		max-height:100%;
@@ -179,8 +199,9 @@ svg{
 		display:none;
 	}
 	.nav-item{
-		padding:0;
 		display:inline-block;
+		cursor:pointer;
+		padding:0;
 	}
 
 	.content-container{

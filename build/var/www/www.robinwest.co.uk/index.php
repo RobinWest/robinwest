@@ -11,23 +11,29 @@
 	<script src="asset/js/main.js"></script>
 </head>
 <body ng-controller="MainController as main">
-	<section class="home">
-		<div class="logo-container">
-			<svg viewBox="0 0 300 300">
-				<use xlink:href="asset/img/logo_trimmed.svg#logo"></use>
-			</svg>
-		</div>
-		<div id="toWork">
-			<svg viewBox="0 0 300 300">
-				<use xlink:href="asset/img/next_section.svg#next-section"></use>
-			</svg>
+	<section id="home">
+		<div id="main-image">
+			<div class="logo-container">
+				<svg viewBox="0 0 300 300">
+					<use xlink:href="asset/img/svg/logo_trimmed.svg#logo"></use>
+				</svg>
+			</div>
+			<div id="toWork">
+				<svg viewBox="0 0 300 300">
+					<use xlink:href="asset/img/svg/icons.svg#next-section"></use>
+				</svg>
+			</div>
 		</div>
 	</section>
 	<section ng-controller="TabController as tab" id="work">
 		<div class="nav-container">
 			<div class="pure-g">
-				<div ng-click="tab.setTab(tab.workTab - 1)" class="pure-u-1-4 nav-control">
-					<h2>&lt;</h2>
+				<div ng-click="tab.setTab(tab.workTab - 1)" class="pure-u-1-4 xl-hide">
+					<div ng-class="{ inactive:tab.isSet(1)}" class="nav-control">
+						<svg viewBox="0 0 300 300">
+							<use xlink:href="asset/img/svg/icons.svg#previous"></use>
+						</svg>
+					</div>
 				</div>
 			
 				<div ng-click="tab.setTab(1)" ng-class="{ selected:tab.isSet(1)}" class="pure-u-1-2 pure-u-xl-1-5 nav-item">
@@ -51,25 +57,29 @@
 					<h3>dev.sign-up.to</h3>
 				</div>
 			
-				<div ng-click="tab.setTab(tab.workTab + 1)" class="pure-u-1-4 nav-control">
-					<h2>&gt;</h2>
+				<div ng-click="tab.setTab(tab.workTab + 1)" class="pure-u-1-4 xl-hide">
+					<div ng-class="{ inactive:tab.isSet(5)}" class="nav-control">
+						<svg viewBox="0 0 300 300">
+							<use xlink:href="asset/img/svg/icons.svg#next"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="content-container">
 			<div class="pure-g">
 				<div class="pure-u-1 pure-u-xl-1-2 gallery-container">
-					<img ng-show="tab.isSet(1)" src="asset/img/me.jpg">
-					<img ng-show="tab.isSet(2)" src="asset/img/sut-logo.jpg">
-					<img ng-show="tab.isSet(3)" src="asset/img/audiences.jpg">
-					<img ng-show="tab.isSet(4)" src="asset/img/sms-manager.jpg">
-					<img ng-show="tab.isSet(5)" src="asset/img/sut-labs.jpg">
+					<img ng-show="tab.isSet(1)" ng-src="asset/img/me.jpg">
+					<img ng-show="tab.isSet(2)" ng-src="asset/img/sut-logo.jpg">
+					<img ng-show="tab.isSet(3)" ng-src="asset/img/audiences.jpg">
+					<img ng-show="tab.isSet(4)" ng-src="asset/img/sms-manager.jpg">
+					<img ng-show="tab.isSet(5)" ng-src="asset/img/sut-labs.jpg">
 				</div>
 				<div class="pure-u-1 pure-u-xl-1-2 information-container">
 					<article class="description-container">
 						<div ng-show="tab.isSet(1)" class="description">
 							<h1>Hi, I'm Robin&hellip;</h1>
-							<p>I'm a front end web developer specialising in UI and UX design. I am currently working as Lead User Interaction Designer in the (small) Interaction team at Sign-Up.to.</p>
+							<p>I'm a front end web developer specialising in UI and UX design. I am currently working as User Experience Lead in the (small) Interaction team at Sign-Up.to.</p>
 							<p>I have worked in web development for around 4 years, gaining experience in modern front end technologies such as Backbone.js, jQuery, Node.js, Angular.js, HTML5, CSS3. I am also familiar with Git, Linux, Apache, PHP and MySQL, among others.</p>
 							<p>When I'm not working I'll likely be playing video games, drawing, playing some music or watching horror movies... Often with a beer in hand.</p>
 						</div>
@@ -125,26 +135,26 @@
 							<div class="pure-u-1">
 								<h1>Contact me</h1>
 							</div>
-							<div class="pure-u-1-3">
+							<div class="pure-u-1 pure-u-lg-1-3">
 								<a href="mailto:robermak@gmail.com" target="_blank">
 									<svg viewBox="0 0 300 300">
-										<use xlink:href="asset/img/icons.svg#mail"></use>
+										<use xlink:href="asset/img/svg/icons.svg#mail"></use>
 									</svg>
 								</a>
 								<a href="mailto:robermak@gmail.com" target="_blank">robermak@gmail.com</a>
 							</div>
-							<div class="pure-u-1-3">
+							<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
 								<a href="https://twitter.com/SirRobinWest" target="_blank">
 									<svg viewBox="0 0 300 300">
-										<use xlink:href="asset/img/icons.svg#twitter"></use>
+										<use xlink:href="asset/img/svg/icons.svg#twitter"></use>
 									</svg>
 								</a>
 								<a href="https://twitter.com/SirRobinWest" target="_blank">@SirRobinWest</a>
 							</div>
-							<div class="pure-u-1-3">
+							<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
 								<a href="https://github.com/RobinWest" target="_blank">
 									<svg viewBox="0 0 300 300">
-										<use xlink:href="asset/img/icons.svg#github"></use>
+										<use xlink:href="asset/img/svg/icons.svg#github"></use>
 									</svg>
 								</a>
 								<a href="https://github.com/RobinWest" target="_blank">RobinWest</a>
