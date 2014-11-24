@@ -141,6 +141,15 @@ svg{
 .description a:hover{
 	color:#345263;
 }
+.description ul{
+	font-size:0.8em;
+	list-style:square;
+	padding:1.2em;
+}
+.description li{
+	margin:0.2em 0;
+}
+
 
 .contact-container{
 	color:#fff;
@@ -169,6 +178,35 @@ svg{
 	border-width:0 0 6em 6em;
 	border-color:transparent transparent #fff transparent;
 }
+.bounce{
+	-webkit-animation: bounce 0.3s;
+	animation: bounce 0.3s;
+}
+
+@-webkit-keyframes bounce{
+	from{
+		-webkit-transform: 	translateX(0em);
+		-ms-transform: 		translateX(0em);
+		transform:			translateX(0em);
+	}
+	to{
+		-webkit-transform: 	translateX(3em);
+		-ms-transform: 		translateX(3em);
+		transform:			translateX(3em);
+	}
+}
+@keyframes bounce{
+	from{
+		-webkit-transform: 	translateX(0em);
+		-ms-transform: 		translateX(0em);
+		transform:			translateX(0em);
+	}
+	to{
+		-webkit-transform: 	translateX(3em);
+		-ms-transform: 		translateX(3em);
+		transform:			translateX(3em);
+	}
+}
 
 /* sm */
 @media screen and (min-width: 35.5em){
@@ -179,7 +217,7 @@ svg{
 }
 /* lg */
 @media screen and (min-width: 64em){
-	body{font-size:1.4em;}
+	body{font-size:1.3em;}
 }
 /* xl */
 @media screen and (min-width: 80em){
