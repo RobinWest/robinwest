@@ -98,16 +98,18 @@
 					<article class="description-container">
 						<div ng-show="tab.isSet(1)" class="description">
 							<h1>Hi, I'm Robin&hellip;</h1>
-							<p>I'm a front end web developer specialising in UI and UX design. I am currently working as User Experience Lead in the Interaction team at Sign-Up.to.</p>
+							<p>I'm a front end web developer specialising in UI and UX design based in Surrey, UK.</p>
+							<p>I'm an avid fan of most things creative; music, typography, photography, programming, illustration, design. I love trying out new techniques and throwing myself at things I don't know yet.</p>
+							<p>If I'm not doing one of the above I'm probably socialising, playing video games or watching old-school horror movies - usually with a beer in hand!</p>
 						</div>
 						
 						<div ng-show="tab.isSet(2)" class="description">
 							<h1>Sign-Up.to</h1>
-							<p>Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our user interfaces.</p>
+							<p>I am currently working as User Experience Lead at Sign-Up.to. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our user interfaces.</p>
 							<ul>
-								<li>Implementing a combination of design studio sessions, early paper prototyping, and iterative, usability-lead development for new applications.</li>
-								<li>Implementing analytics tools across specific areas of the platform to gain insight and smooth out common choke-points for new and existing users.</li>
-								<li>Using web technologies such as Backbone.js, Node.js, jQuery, HTML5, CSS3  to create quick, easy to use applications for complex functionality.</li>
+								<li>Implemented a combination of design studio sessions, early paper prototyping, and iterative, usability-lead development for new applications.</li>
+								<li>Implemented analytics tools across specific areas of the platform to gain insight and smooth out common choke-points for new and existing users.</li>
+								<li>Using web technologies such as Backbone.js, Node.js, jQuery, HTML5, CSS3  to create snappy, easy to use applications for complex functionality.</li>
 								<li>Continued maintanance and improvement of legacy areas of the platform.</li>
 							</ul>
 						</div>

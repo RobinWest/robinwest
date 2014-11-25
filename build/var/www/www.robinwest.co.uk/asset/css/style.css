@@ -17,7 +17,6 @@ html, body{
 	padding:0;
 }
 h1,h2,h3,h4,h5{
-	font-family:"Consolas", Courier, monospace;
 }
 
 section#home,
@@ -103,6 +102,7 @@ svg{
 	border-bottom:0.4em solid #B17070;
 }
 .nav-item span{
+	font-family:"Consolas", Courier, monospace;
 	color:#fff;
 	background-color:#517C97;
 	padding:0 0.4em;
