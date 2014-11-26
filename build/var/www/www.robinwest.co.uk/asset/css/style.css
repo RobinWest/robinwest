@@ -143,9 +143,8 @@ svg{
 	color:#345263;
 }
 .description ul{
-	font-size:0.8em;
 	list-style:square;
-	padding:1.2em;
+	padding:0 1.2em;
 }
 .description li{
 	margin:0.2em 0;

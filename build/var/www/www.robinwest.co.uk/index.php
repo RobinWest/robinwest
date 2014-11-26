@@ -65,15 +65,15 @@
 				</div>
 				<div ng-click="tab.setTab(3)" ng-class="{ selected:tab.isSet(3)}" class="pure-u-1-2 pure-u-xl-1-5 nav-item">
 					<p><span>Previous work</span></p>
-					<h3>Audiences</h3>
+					<h3>dev.sign-up.to</h3>
 				</div>
 				<div ng-click="tab.setTab(4)" ng-class="{ selected:tab.isSet(4)}" class="pure-u-1-2 pure-u-xl-1-5 nav-item">
-					<p><span>Previous work</span></p>
-					<h3>SMS manager</h3>
+					<p><span>Personal</span></p>
+					<h3>Knit me a cake</h3>
 				</div>
 				<div ng-click="tab.setTab(5)" ng-class="{ selected:tab.isSet(5)}" class="pure-u-1-2 pure-u-xl-1-5 nav-item">
-					<p><span>Previous work</span></p>
-					<h3>dev.sign-up.to</h3>
+					<p><span>Personal</span></p>
+					<h3>Photographs</h3>
 				</div>
 			
 				<div ng-click="tab.setTab(tab.workTab + 1)" class="pure-u-1-4 xl-hide">
@@ -90,9 +90,9 @@
 				<div class="pure-u-1 pure-u-xl-1-2 gallery-container">
 					<img ng-show="tab.isSet(1)" ng-src="asset/img/me.jpg">
 					<img ng-show="tab.isSet(2)" ng-src="asset/img/sut-logo.jpg">
-					<img ng-show="tab.isSet(3)" ng-src="asset/img/audiences.jpg">
-					<img ng-show="tab.isSet(4)" ng-src="asset/img/sms-manager.jpg">
-					<img ng-show="tab.isSet(5)" ng-src="asset/img/sut-dev.jpg">
+					<img ng-show="tab.isSet(3)" ng-src="asset/img/sut-dev.jpg">
+					<img ng-show="tab.isSet(4)" ng-src="asset/img/audiences.jpg">
+					<img ng-show="tab.isSet(5)" ng-src="asset/img/sms-manager.jpg">
 				</div>
 				<div class="pure-u-1 pure-u-xl-1-2 information-container">
 					<article class="description-container">
@@ -105,48 +105,35 @@
 						
 						<div ng-show="tab.isSet(2)" class="description">
 							<h1>Sign-Up.to</h1>
-							<p>I am currently working as User Experience Lead at Sign-Up.to. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our user interfaces.</p>
+							<p>I am currently working as User Experience Lead at Sign-Up.to. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our applications.</p>
 							<ul>
 								<li>Implemented a combination of design studio sessions, early paper prototyping, and iterative, usability-lead development for new applications.</li>
 								<li>Implemented analytics tools across specific areas of the platform to gain insight and smooth out common choke-points for new and existing users.</li>
-								<li>Using web technologies such as Backbone.js, Node.js, jQuery, HTML5, CSS3  to create snappy, easy to use applications for complex functionality.</li>
-								<li>Continued maintanance and improvement of legacy areas of the platform.</li>
+								<li>Using web technologies such as Backbone.js, Node.js, jQuery, HTML5, CSS3  to create snappy, easy to use applications with complex functionality.</li>
+								<li>Integration with Sign-Up.to's own RESTful <a href="http://dev.sign-up.to" target="_blank">PMAPI</a>.</li>
 							</ul>
 						</div>
-						
+
 						<div ng-show="tab.isSet(3)" class="description">
-							<h1>Audiences</h1>
-							<p>The audience segmentation tools allow our users to create complex cross-sections of their subscribers based on data they have collected.</p>
-							<ul>
-								<li>Early design studio sessions to collect stakeholder product requirements.</li>
-								<li>Wireframing and paper prototyping.</li>
-								<li>Early prototyping and continued usabilty testing to prove design concepts and steer development.</li>
-								<li>Use of custom widget architecture utilising Backbone.js, Underscore.js and jQuery.</li>
-								<li>Integration with Sign-Up.to's own <a href="http://dev.sign-up.to" target="_blank">PMAPI</a>.</li>
-								<li>Implementation of Google Maps API's.</li>
-							</ul>
-						</div>
-						
-						<div ng-show="tab.isSet(4)" class="description">
-							<h1>SMS manager</h1>
-							<p>Sign-Up.to offers the abilty to recieve SMS messages via a UK shortcode. The SMS manager adds the ability to respond, react and process these messages.</p>
-							<ul>
-								<li>First implementation of custom widget architecture utilising Backbone.js, Underscore.js and jQuery.</li>
-								<li>Early design studio sessions to collect stakeholder product requirements.</li>
-								<li>Early wireframe based usability testing.</li>
-								<li>Integration with Sign-Up.to's own <a href="http://dev.sign-up.to" target="_blank">PMAPI</a>.</li>
-							</ul>
-						</div>
-						
-						<div ng-show="tab.isSet(5)" class="description">
 							<h1>dev.sign-up.to</h1>
-							<p>The <a href="http://dev.sign-up.to" target="_blank">documentation site</a> for the PMAPI (Permission Marketing API) - Sign-Up.to's bespoke integration API.</p>
+							<p>The documentation site for the <a href="http://dev.sign-up.to" target="_blank">Permission Marketing API</a> - Sign-Up.to's bespoke integration API.</p>
 							<ul>
 								<li>Design of various elements and sections of the site including the logo, <a href="https://dev.sign-up.to/documentation/reference/latest/guides/glossary/" target="_blank">glossary</a> and <a href="https://dev.sign-up.to/careers/" target="_blank">careers</a> section.</li>
 								<li>Working with the team to create a custom framework to support versioning, release logs and serve pages.</li>
 								<li>Continued maintainence and improvement of design and features.</li>
 								<li>Updating and writing documentation for existing and new endpoints.</li>
 							</ul>
+						</div>
+
+						<div ng-show="tab.isSet(4)" class="description">
+							<h1>Knit me a cake</h1>
+							<p>My friend <a href="https://twitter.com/LeanneBeale" target="_blank">@LeanneBeale</a> wanted a new logo and colour scheme created for her craft blog. We were both pleased with how the design turned out, but recently a tough decision was made to close the blog and make a <a href="http://thislittlespaceofmine.co.uk/" target="_blank">fresh start</a> after a short break.</p>
+							<p>I created the logo by using a chalk board and pens, then used Adobe Illustrator to vectorise and arrange the different elements.</p>
+						</div>
+
+						<div ng-show="tab.isSet(5)" class="description">
+							<h1>Photographs</h1>
+							<p>These days I use a simple Olympus Trip 35mm camera for most occasions. I find it stops me trying to perfect shots, locking my face in a viewfinder only to miss the experience.</p>
 						</div>
 					</article>
 					<article class="contact-container">
