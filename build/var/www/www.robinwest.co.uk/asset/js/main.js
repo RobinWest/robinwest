@@ -30,7 +30,7 @@
 
 		this.setTab = function(tab){
 			// bail if it's out of range
-			if(tab > 5 || tab < 1)
+			if(tab > 4 || tab < 1)
 				return;
 
 			this.workTab = tab;
