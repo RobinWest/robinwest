@@ -129,7 +129,7 @@
 					<article class="contact-container">
 						<div class="pure-g">
 							<div class="pure-u-1">
-								<h1>Contact me</h1>
+								<h2>Contact me</h2>
 							</div>
 							<div class="pure-u-1 pure-u-lg-1-3">
 								<a href="mailto:robermak@gmail.com" target="_blank">

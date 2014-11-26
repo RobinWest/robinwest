@@ -16,9 +16,6 @@ html, body{
 	margin:0;
 	padding:0;
 }
-h1,h2,h3,h4,h5{
-}
-
 section#home,
 #main-image{
 	background: #273d47 url(../img/background-placeholder.jpg) no-repeat center center fixed;
@@ -150,7 +147,6 @@ svg{
 	margin:0.2em 0;
 }
 
-
 .contact-container{
 	color:#fff;
 	background-color:#5FAC53;
@@ -159,6 +155,9 @@ svg{
 	width:50%;
 	display:block;
 	margin: 0 auto;
+}
+.contact-container h2{
+	margin:0;
 }
 .contact-container a{
 	display:block;
@@ -266,9 +265,9 @@ svg{
 		border-color:transparent transparent #5FAC53 transparent;
 	}
 	.description-container{
-		height:60%;
+		height:70%;
 	}
 	.contact-container{
-		height:40%;
+		height:30%;
 	}
 }
