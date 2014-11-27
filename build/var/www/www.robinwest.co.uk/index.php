@@ -100,7 +100,7 @@
 						
 						<div ng-show="tab.isSet(2)" class="description">
 							<h1>Sign-Up.to</h1>
-							<p>I am currently working as User Experience Lead at Sign-Up.to. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our applications.</p>
+							<p>I am currently the User Experience Lead and Interaction team leader at Sign-Up.to. Since joining the Interaction team I have worked to improve the user experience of the Sign-Up.to platform and the processes used to develop our applications.</p>
 							<ul>
 								<li>Implemented a combination of design studio sessions, early paper prototyping, and iterative, usability-lead development for new applications.</li>
 								<li>Implemented analytics tools across specific areas of the platform to gain insight and smooth out common choke-points for new and existing users.</li>
@@ -115,15 +115,15 @@
 							<ul>
 								<li>Design of various elements and sections of the site including the logo, <a href="https://dev.sign-up.to/documentation/reference/latest/guides/glossary/" target="_blank">glossary</a> and <a href="https://dev.sign-up.to/careers/" target="_blank">careers</a> section.</li>
 								<li>Working with the team to create a custom framework to support versioning, release logs and serve pages.</li>
-								<li>Continued maintainence and improvement of design and features.</li>
+								<li>Continued maintenance and improvement of design and features.</li>
 								<li>Updating and writing documentation for existing and new endpoints.</li>
 							</ul>
 						</div>
 
 						<div ng-show="tab.isSet(4)" class="description">
 							<h1>Knit me a cake</h1>
-							<p>My friend <a href="https://twitter.com/LeanneBeale" target="_blank">@LeanneBeale</a> wanted a new logo and colour scheme created for her craft blog. We were both pleased with how the design turned out, but recently a tough decision was made to close the blog and make a <a href="http://thislittlespaceofmine.co.uk/" target="_blank">fresh start</a> after a short break.</p>
-							<p>I created the logo by using a chalk board and pens, then used Adobe Illustrator to vectorise and arrange the different elements.</p>
+							<p>My friend <a href="https://twitter.com/LeanneBeale" target="_blank">@LeanneBeale</a> wanted a new logo and colour scheme created for her craft blog. We were both pleased with how the design turned out but recently a tough decision was made - to close the blog and, after a short break, make a <a href="http://thislittlespaceofmine.co.uk/" target="_blank">fresh start</a>.</p>
+							<p>I created the logo by using a chalk board and pens to give it a home made feel, then used Adobe Illustrator to vectorise and arrange the different elements.</p>
 						</div>
 					</article>
 					<article class="contact-container">
