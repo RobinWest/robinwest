@@ -18,11 +18,13 @@ html, body{
 }
 section#home,
 #main-image{
-	background: #273d47 url(../img/background-placeholder.jpg) no-repeat center center fixed;
+	background:url(../img/background-placeholder.jpg);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	background-position:center center;
+	background-repeat:no-repeat;
 }
 #main-image{
 	opacity:0;
@@ -217,6 +219,13 @@ svg{
 /* lg */
 @media screen and (min-width: 64em){
 	body{font-size:1.3em;}
+
+	/* iOS can't handle 'cover' well */
+	section#home,
+	#main-image{
+		background-attachment:fixed;
+	}
+
 }
 /* xl */
 @media screen and (min-width: 80em){
