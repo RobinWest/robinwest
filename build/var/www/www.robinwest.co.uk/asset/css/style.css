@@ -99,6 +99,7 @@ svg{
 }
 .nav-item.selected{
 	border-bottom:0.4em solid #B17070;
+	transition: border-color 0.3s;
 }
 .nav-item span{
 	font-family:"Consolas", Courier, monospace;
@@ -215,6 +216,9 @@ svg{
 }
 /* md */
 @media screen and (min-width: 48em){
+	.nav-item{
+		padding:2em 1em;
+	}
 }
 /* lg */
 @media screen and (min-width: 64em){
@@ -225,7 +229,6 @@ svg{
 	#main-image{
 		background-attachment:fixed;
 	}
-
 }
 /* xl */
 @media screen and (min-width: 80em){
@@ -238,7 +241,6 @@ svg{
 	}
 	.nav-container{
 		height:10%;
-		/*padding-top:1.2em;*/
 		padding-top:1%;
 	}
 	.nav-control{
