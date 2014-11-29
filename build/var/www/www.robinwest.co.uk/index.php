@@ -24,9 +24,10 @@
 
 	<link rel="stylesheet" href="asset/css/pure.css">
 	<link rel="stylesheet" href="asset/css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="asset/js/svg4everybody.ie8.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+	<script src="asset/js/angular.min.js"></script>
+	<script src="asset/js/jquery.min.js"></script>
 	<script src="asset/js/main.js"></script>
 </head>
 <body ng-controller="MainController as main">
