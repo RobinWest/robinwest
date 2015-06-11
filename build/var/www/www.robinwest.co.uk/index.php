@@ -62,7 +62,7 @@
 				</div>
 
 				<div ng-click="content.setTab(content.workTab + 1)" class="pure-u-1-4 xl-hide">
-					<div ng-class="{ inactive:content.isSet(4)}" class="nav-control">
+					<div ng-class="{ inactive:content.isSet(content.descriptions.length)}" class="nav-control">
 						<svg viewBox="0 0 300 300">
 							<use xlink:href="asset/img/svg/icons.svg#next"></use>
 						</svg>

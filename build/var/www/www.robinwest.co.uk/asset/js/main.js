@@ -35,18 +35,24 @@
 				templateSrc: 'asset/html/aboutme.html'
 			},{
 				id: 2,
+				name: 'KOBAS',
+				tag: 'Previous work',
+				imgSrc: 'asset/img/kobas.jpg',
+				templateSrc: 'asset/html/kobas.html'
+			},{
+				id: 3,
 				name: 'Sign-Up.to',
 				tag: 'Previous work',
 				imgSrc: 'asset/img/sut-logo.jpg',
 				templateSrc: 'asset/html/sut.html'
 			},{
-				id: 3,
+				id: 4,
 				name: 'dev.sign-up.to',
 				tag: 'Previous Work',
 				imgSrc: 'asset/img/sut-dev.jpg',
 				templateSrc: 'asset/html/dev.html'
 			},{
-				id: 4,
+				id: 5,
 				name: 'Knit me a cake',
 				tag: 'Personal',
 				imgSrc: 'asset/img/knitmeacake.jpg',
