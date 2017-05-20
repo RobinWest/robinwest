@@ -1,0 +1,140 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body, #app, #app > [data-reactroot], .main-container{
+	height: 100%;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+hr{
+	border-bottom: 0;
+}
+
+.main-container{
+}
+
+.sidebar, .main-body{
+	padding: 1rem 2rem;
+}
+
+.sidebar{
+	width: 100%;
+	height: 8rem;
+	background-color: #ccc;
+	transition: min-height 300ms ease, height 300ms ease;
+}
+.sidebar.active{
+	height: 100%;
+	overflow: auto;
+}
+.sidebar a.sidebar-toggle{
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	padding: 0.4rem 0.8rem;
+	border-radius: 3px;
+	background-color: #C94446;
+	cursor: pointer;
+}
+.sidebar .contacts-container{
+	opacity: 0;
+	transform: translateY(-3rem);
+	transition: opacity 100ms ease, transform 100ms ease;
+}
+.sidebar.active .contacts-container{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.sidebar .logo-container{
+	width: 100%;
+	height: 100%;
+	max-height: 14rem;
+	transform: translateX(-50%);
+	transition: transform 400ms ease, height 300ms ease;
+}
+.sidebar .logo-container img{
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	border-radius: 100%;
+	transform: translateX(3rem);
+	transition: transform 400ms ease;
+}
+
+.sidebar.active .logo-container{
+	height: 14rem;
+	transform: translateX(0);
+}
+.sidebar.active .logo-container img{
+	transform: translateX(0);
+}
+
+.contacts-container{}
+
+.contacts-container h2{
+	text-align:center;
+}
+
+.contact{
+	width: 33%;
+	margin: 0 auto;
+}
+
+.main-body{
+	width: 100%;
+}
+
+@media screen and (min-width: 42rem){
+	.main-container{
+		display: flex;
+		flex-direction: row;
+		margin-top: 0;
+	}
+
+	.sidebar, .main-body{
+		overflow: auto;
+	}
+
+	.sidebar{
+		background-color: red;
+		height: 100%;
+		width: 30rem;
+	}
+
+	.sidebar .logo-container, .sidebar .logo-container img{
+		transform: none;
+	}
+
+	.sidebar a.sidebar-toggle{
+		display:none;
+	}
+
+	.sidebar .contacts-container{
+		opacity:1;
+		transform: none;
+	}
+
+	.contact{
+		width: 100%;
+	}
+
+	.logo-container{
+		position: relative;
+		margin: 0 auto;
+		width: 50%;
+		height: initial;
+	}
+	.logo-container img{
+	}
+}
