@@ -1,3 +1,6 @@
+/* 
+ main.css
+*/
 html {
 	box-sizing: border-box;
 }
@@ -18,34 +21,42 @@ body{
 
 hr{
 	border-bottom: 0;
+	border-style: solid;
 }
 
 .main-container{
 }
 
-.sidebar, .main-body{
+.sidebar, .body-container{
 	padding: 1rem 2rem;
 }
 
 .sidebar{
 	width: 100%;
 	height: 8rem;
-	background-color: #ccc;
+	background-color: #ce3535;
+	overflow: hidden;
 	transition: min-height 300ms ease, height 300ms ease;
 }
+
 .sidebar.active{
 	height: 100%;
 	overflow: auto;
 }
 .sidebar a.sidebar-toggle{
 	position: absolute;
-	top: 2rem;
-	right: 2rem;
+	top: 1rem;
+	right: 1rem;
 	padding: 0.4rem 0.8rem;
 	border-radius: 3px;
-	background-color: #C94446;
+	background-color: #fff;
 	cursor: pointer;
 }
+/*.sidebar hr{
+	margin: 2rem 1rem;
+	border-color: #fff;
+}*/
+
 .sidebar .contacts-container{
 	opacity: 0;
 	transform: translateY(-3rem);
@@ -63,11 +74,11 @@ hr{
 	transform: translateX(-50%);
 	transition: transform 400ms ease, height 300ms ease;
 }
-.sidebar .logo-container img{
+.sidebar .logo-container svg{
 	display: block;
 	height: 100%;
 	margin: 0 auto;
-	border-radius: 100%;
+	fill: rgba(0,0,0,0.6);
 	transform: translateX(3rem);
 	transition: transform 400ms ease;
 }
@@ -76,7 +87,7 @@ hr{
 	height: 14rem;
 	transform: translateX(0);
 }
-.sidebar.active .logo-container img{
+.sidebar.active .logo-container svg{
 	transform: translateX(0);
 }
 
@@ -87,11 +98,32 @@ hr{
 }
 
 .contact{
-	width: 33%;
-	margin: 0 auto;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.2rem;
+	color: #000;
+	text-decoration: none;
+	line-height: 2.6em;
+	text-overflow: ellipsis;
+	width: 80%;
+	margin: 1rem auto;
+	padding-left: 4rem;
+	border-radius: 4px;
+}
+.contact:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+.contact svg{
+	position: absolute;
+	top: 15%;
+	left: 1rem;
+	width: 2rem;
+	height: 2rem;
 }
 
-.main-body{
+.body-container{
+	position: relative;
 	width: 100%;
 }
 
@@ -102,17 +134,32 @@ hr{
 		margin-top: 0;
 	}
 
-	.sidebar, .main-body{
+	/*.sidebar, .body-container{*/
+	.sidebar, .body-container{
 		overflow: auto;
 	}
 
 	.sidebar{
-		background-color: red;
+		position: relative;
 		height: 100%;
 		width: 30rem;
 	}
+	.sidebar::before,
+	.sidebar::after{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 3rem 3rem 0;
+		border-color: transparent #fff transparent transparent;
+	}
+	.sidebar::before{}
+	.sidebar::after{}
 
-	.sidebar .logo-container, .sidebar .logo-container img{
+	.sidebar .logo-container, .sidebar .logo-container svg{
 		transform: none;
 	}
 
@@ -129,12 +176,8 @@ hr{
 		width: 100%;
 	}
 
-	.logo-container{
-		position: relative;
-		margin: 0 auto;
-		width: 50%;
-		height: initial;
+	.sidebar .logo-container{
 	}
-	.logo-container img{
+	.sidebar .logo-container img{
 	}
 }

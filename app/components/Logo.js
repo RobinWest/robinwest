@@ -1,13 +1,15 @@
 var React = require('react');
 
+var LogoSVG = require('./LogoSVG');
+
 class Logo extends React.Component {
 	render(){
 		return (
 			<div className="logo-container">
-				<img src="//s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg" />
+				<LogoSVG />
 			</div>
 		);
-	}
+	};
 }
 
 module.exports = Logo;

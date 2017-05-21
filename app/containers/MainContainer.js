@@ -14,7 +14,7 @@ class MainContainer extends React.Component {
 				<BodyContainer />
 			</div>
 		);
-	}
+	};
 }
 
 module.exports = MainContainer;

@@ -11,7 +11,8 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
 	entry: [
 		__dirname + '/app/index.js',
-		__dirname + '/app/css/main.css'
+		__dirname + '/app/css/main.css',
+		__dirname + '/app/css/icons.css'
 	],
 	module: {
 		// loaders: [
