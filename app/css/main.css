@@ -7,6 +7,11 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 html, body, #app, #app > [data-reactroot], .main-container{
 	height: 100%;
@@ -127,6 +132,47 @@ hr{
 	width: 100%;
 }
 
+.skill{
+	margin: 2rem 0;
+	padding: 1.6rem 1rem;
+	border: 1px solid #eee;
+	box-shadow: 0 4px 6px -3px rgba(0,0,0,0.3);
+	transition: box-shadow 300ms ease;
+}
+.skill:hover{
+	box-shadow: 0 4px 8px 0px rgba(0,0,0,0.3);
+}
+
+.skill .skill-icon{
+	float: left;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 100%;
+	background-color: #ce3535;
+}
+.skill .skill-icon svg{
+	width: 4rem;
+	height: 4rem;
+	padding: 1rem;
+}
+.skill h3{
+	float: left;
+	line-height:4.2rem;
+	margin: 0 1rem;
+}
+.skill ul{
+	overflow: hidden;
+	height: 0;
+	transform: translateY(-3rem);
+	opacity: 0;
+	transition: height 100ms ease, transform 200ms ease, opacity 300ms ease;
+}
+.skill.active ul{
+	height: auto;
+	transform: translateY(0);
+	opacity: 1;
+}
+
 @media screen and (min-width: 42rem){
 	.main-container{
 		display: flex;
@@ -134,7 +180,6 @@ hr{
 		margin-top: 0;
 	}
 
-	/*.sidebar, .body-container{*/
 	.sidebar, .body-container{
 		overflow: auto;
 	}
