@@ -10,34 +10,32 @@ class ContactsContainer extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.state = {
-			contacts: [
-				{
-					name: 'contact@robinwest.co.uk',
-					icon: <MailIcon />,
-					href: 'mailto:contact@robinwest.co.uk'
-				},{
-					name: 'Github',
-					icon: <GithubIcon />,
-					href: '//github.com/RobinWest'
-				},{
-					name: 'Twitter',
-					icon: <TwitterIcon />,
-					href: '//twitter.com/_robinpwest'
-				},{
-					name: 'Instagram',
-					icon: <InstagramIcon />,
-					href: '//www.instagram.com/robinpwest/'
-				}
-			]
-		};
+		this.contacts = [
+			{
+				name: 'contact@robinwest.co.uk',
+				icon: <MailIcon />,
+				href: 'mailto:contact@robinwest.co.uk'
+			},{
+				name: 'Github',
+				icon: <GithubIcon />,
+				href: '//github.com/RobinWest'
+			},{
+				name: 'Twitter',
+				icon: <TwitterIcon />,
+				href: '//twitter.com/_robinpwest'
+			},{
+				name: 'Instagram',
+				icon: <InstagramIcon />,
+				href: '//www.instagram.com/robinpwest/'
+			}
+		];
 	};
 
 	render(){
 		return (
 			<div className="contacts-container">
 				<h2>Contact</h2>
-				{this.state.contacts.map(function(contact, index){
+				{this.contacts.map(function(contact, index){
 					return <Contact key={'contact-' + index} icon={contact.icon} href={contact.href}>{contact.name}</Contact>;
 				})}
 			</div>
