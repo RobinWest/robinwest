@@ -8,39 +8,39 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	inject: 'body'
 });
 
+var extractLess = new ExtractTextPlugin('./assets/css/styles.less.css');
+
 module.exports = {
-	entry: [
-		__dirname + '/app/index.js',
-		__dirname + '/app/css/main.css',
-		__dirname + '/app/css/icons.css'
-	],
+	entry: {
+		app: __dirname + '/app/index.js'
+	},
 	module: {
-		// loaders: [
-		// 	{
-		// 		test: /\.js$/,
-		// 		exclude: /node_modules/,
-		// 		loader: 'babel-loader'
-		// 	}
-		// ],
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: 'babel-loader'
 			},{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					use: 'css-loader'
+				test: [/\.less$/i, /\.css$/],
+				use: extractLess.extract({
+					use: [{
+						// loader: "css-loader", options: { sourceMaps: true, minimize: true }
+						loader: "css-loader", options: {}
+					}, {
+						// loader: "less-loader", options: { sourceMaps: true, minimize: true }
+						loader: "less-loader", options: {}
+					}]
 				})
 			}
 		]
 	},
 	output: {
-		filename: 'app.js',
+		filename: '[name].js',
 		path: __dirname + '/build'
 	},
 	plugins: [
 		HTMLWebpackPluginConfig,
-		new ExtractTextPlugin('styles.css')
-	]
+		extractLess
+	],
+	devtool: 'source-map'
 };

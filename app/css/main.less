@@ -1,0 +1,271 @@
+/* 
+ main.css
+*/
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html, body, #app, #app > [data-reactroot], .main-container{
+	height: 100%;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+hr{
+	border-bottom: 0;
+	border-style: solid;
+}
+
+.main-container{
+}
+
+.sidebar, .body-container{
+	padding: 1rem 2rem;
+}
+
+.sidebar{
+	width: 100%;
+	height: 8rem;
+	background-color: #ce3535;
+	overflow: hidden;
+	transition: min-height 300ms ease, height 300ms ease;
+
+	a.sidebar-toggle{
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		padding: 0.4rem 0.8rem;
+		border-radius: 3px;
+		background-color: #fff;
+		cursor: pointer;
+	}
+
+	.contacts-container{
+		opacity: 0;
+		transform: translateY(-3rem);
+		transition: opacity 100ms ease, transform 100ms ease;
+	}
+	.contacts-container h2{
+		text-align:center;
+	}
+
+	.logo-container{
+		width: 100%;
+		height: 100%;
+		max-height: 14rem;
+		transform: translateX(-50%);
+		transition: transform 400ms ease, height 300ms ease;
+	}
+	.logo-container svg{
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		fill: rgba(0,0,0,0.6);
+		transform: translateX(3rem);
+		transition: transform 400ms ease;
+	}
+
+
+	&.active{
+		height: 100%;
+		overflow: auto;
+
+		.contacts-container{
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.logo-container{
+			height: 14rem;
+			transform: translateX(0);
+		}
+		.logo-container svg{
+			transform: translateX(0);
+		}
+	}
+}
+
+.contact{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.2rem;
+	color: #000;
+	text-decoration: none;
+	line-height: 2.6em;
+	text-overflow: ellipsis;
+	width: 80%;
+	margin: 1rem auto;
+	padding-left: 4rem;
+	border-radius: 4px;
+
+	&:hover{
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	svg{
+		position: absolute;
+		top: 15%;
+		left: 1rem;
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.body-container{
+	position: relative;
+	width: 100%;
+}
+
+.skill{
+	margin: 2rem 0;
+	/*padding: 1.6rem 1rem;*/
+
+	.heading{
+		padding: 1.6rem 1rem;
+		border: 1px solid #eee;
+		box-shadow: 0 4px 6px -3px rgba(0,0,0,0.3);
+		transition: box-shadow 300ms ease;
+
+		&:hover{
+			box-shadow: 0 4px 8px 0px rgba(0,0,0,0.3);
+		}
+	}
+
+	.skill-icon{
+		float: left;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 100%;
+		background-color: #ce3535;
+		border: 0.2rem solid #000;
+
+		svg{
+			width: 3.6rem;
+			height: 3.6rem;
+			padding: 1rem;
+		}
+	}
+
+	h3{
+		float: left;
+		line-height:4.2rem;
+		margin: 0 1rem;
+	}
+
+	ul{
+		position: relative;
+		overflow: hidden;
+		font-family: consolas, courier, monospace;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		background-color: #5996bb;
+		border-radius: 4px;
+		opacity: 0;
+		transform: translateY(-3rem);
+		transition: height 100ms ease, transform 200ms ease, opacity 300ms ease;
+
+		&:after{
+			position: absolute;
+			content: '';
+			top: -1.6rem;
+			left: 1.4rem;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 1.6rem 1.6rem 1.6rem;
+			border-color: transparent transparent #5996bb transparent;
+		}
+
+		li{
+			display: inline-block;
+			margin: 0.4rem;
+			padding: 0.2rem 0.6rem;
+			background-color: #fff;
+			border-radius: 4px;
+		}
+	}
+
+
+	&.active{
+		ul{
+			overflow: initial;
+			height: auto;
+			margin: 2rem 0 0;
+			padding: 1rem;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+}
+
+
+
+@media screen and (min-width: 42rem){
+	.main-container{
+		display: flex;
+		flex-direction: row;
+		margin-top: 0;
+	}
+
+	.sidebar, .body-container{
+		overflow: auto;
+	}
+
+	.sidebar{
+		position: relative;
+		height: 100%;
+		width: 30rem;
+	}
+	.sidebar::after{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 3rem 3rem 0;
+		border-color: transparent #fff transparent transparent;
+	}
+	.sidebar::before{}
+	.sidebar::after{}
+
+	.sidebar .logo-container, .sidebar .logo-container svg{
+		transform: none;
+	}
+
+	.sidebar a.sidebar-toggle{
+		display:none;
+	}
+
+	.sidebar .contacts-container{
+		opacity:1;
+		transform: none;
+	}
+
+	.contact{
+		width: 100%;
+	}
+
+	.sidebar .logo-container{
+		margin: 2rem 0;
+	}
+	.sidebar .logo-container img{
+	}
+}
