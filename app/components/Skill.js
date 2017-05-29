@@ -20,8 +20,8 @@ class Contact extends React.Component {
 
 	render(){
 		return (
-			<div className={`skill ${this.state.active ? 'active' : ''}`} onClick={this.toggleState}>
-				<div className="heading clearfix">
+			<div className={`skill ${this.state.active ? 'active' : ''}`}>
+				<div className="heading clearfix" onClick={this.toggleState}>
 					<div className="skill-icon">{this.props.icon}</div>
 					<h3>{this.props.children}</h3>
 				</div>

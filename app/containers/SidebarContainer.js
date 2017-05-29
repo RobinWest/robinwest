@@ -2,7 +2,7 @@ var React = require('react');
 
 var ContactsContainer = require('./ContactsContainer');
 var Logo              = require('../components/Logo');
-var MailIcon          = require('../components/icons/MailIcon');
+var MenuDownIcon      = require('../components/icons/MenuDownIcon');
 var CrossIcon         = require('../components/icons/CrossIcon');
 
 class SidebarContainer extends React.Component {
@@ -31,7 +31,7 @@ class SidebarContainer extends React.Component {
 				<ContactsContainer />
 				<a className="sidebar-toggle" onClick={this.toggleState}>
 					{!this.state.active && `Contact `}
-					{!this.state.active && <MailIcon />}
+					{!this.state.active && <MenuDownIcon />}
 					{this.state.active && <CrossIcon />}
 				</a>
 			</div>
