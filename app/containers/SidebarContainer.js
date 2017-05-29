@@ -1,5 +1,7 @@
 var React = require('react');
 
+require('../css/components/sidebar.less');
+
 var ContactsContainer = require('./ContactsContainer');
 var Logo              = require('../components/Logo');
 var MenuDownIcon      = require('../components/icons/MenuDownIcon');

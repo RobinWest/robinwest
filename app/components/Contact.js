@@ -1,5 +1,7 @@
 var React = require('react');
 
+require('../css/components/contact.less');
+
 class Contact extends React.Component {
 	render(){
 		return (

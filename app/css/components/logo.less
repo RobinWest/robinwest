@@ -1,0 +1,43 @@
+@import '../variables.less';
+
+/* Logo Component */
+
+.logo-container{
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	max-height: 14rem;
+	transform: translateX(-50%);
+	transition: transform 400ms ease, height 300ms ease;
+
+	svg{
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		fill: #000;
+		transform: translateX(6rem);
+		transition: transform 400ms ease;
+	}
+}
+
+.active{
+	.logo-container{
+		height: 14rem;
+		transform: translateX(0);
+	}
+	.logo-container svg{
+		transform: translateX(0);
+	}
+}
+
+@media @size-md{
+	.logo-container {
+		margin: 2rem 0;
+		transform: none;
+
+		svg{
+			transform: none;
+		}
+	}
+}

@@ -1,10 +1,7 @@
-/* Variables */
-@crimson: #ce3535;
-@blue: #5996bb;
+@import 'variables.less';
 
-/* 
- main.css
-*/
+/* main.css */
+
 html {
 	box-sizing: border-box;
 }
@@ -36,114 +33,13 @@ hr{
 .main-container{
 }
 
-/*.sidebar,*/ .body-container{
-	padding: 1rem 2rem;
-}
-
-.sidebar{
-	width: 100%;
-	height: 8rem;
-	background-color: @crimson;
-	overflow: hidden;
-	transition: min-height 300ms ease, height 300ms ease;
-
-	a.sidebar-toggle{
-		position: absolute;
-		top: 1rem;
-		right: 2rem;
-		padding: 0.6rem 1rem;
-		border-radius: 3px;
-		background-color: #fff;
-		cursor: pointer;
-
-		svg{
-			margin-bottom: -0.1rem;
-			&.icon-menu-down{
-				margin-left: 0.6rem;
-			}
-		}
-	}
-
-	.contacts-container{
-		opacity: 0;
-		transform: translateY(-3rem);
-		transition: opacity 100ms ease, transform 100ms ease;
-
-		h2{
-			text-align:center;
-		}
-
-		.contact{
-			display: block;
-			position: relative;
-			overflow: hidden;
-			width: 80%;
-			font-size: 1.2rem;
-			color: #000;
-			text-decoration: none;
-			text-overflow: ellipsis;
-			line-height: 2.6em;
-			margin: 1rem auto;
-			padding: 0 2rem;
-			padding-left: 5rem;
-			// border-radius: 4px;
-
-			&:hover{
-				background-color: #fff;
-			}
-
-			svg{
-				position: absolute;
-				top: 16%;
-				left: 2rem;
-				width: 2rem;
-				height: 2rem;
-			}
-		}
-	}
-
-	.logo-container{
-		width: 100%;
-		height: 100%;
-		padding: 1rem;
-		max-height: 14rem;
-		transform: translateX(-50%);
-		transition: transform 400ms ease, height 300ms ease;
-
-		svg{
-			display: block;
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			fill: #000;
-			transform: translateX(6rem);
-			transition: transform 400ms ease;
-		}
-	}
-
-
-	&.active{
-		height: 100%;
-		overflow: auto;
-
-		.contacts-container{
-			transform: translateY(0);
-			opacity: 1;
-		}
-
-		.logo-container{
-			height: 14rem;
-			transform: translateX(0);
-		}
-		.logo-container svg{
-			transform: translateX(0);
-		}
-	}
-}
-
 .body-container{
 	position: relative;
 	width: 100%;
+
+	.body{
+		padding: 1rem 2rem;
+	}
 
 	a{
 		text-decoration: none;
@@ -158,182 +54,23 @@ hr{
 }
 
 .skills-container{
-	.flex-row{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: stretch;
-
-		.skill{
-			min-width: 14rem;
-			flex: 1 1 30%;
-		}
+	h2{
+		padding: 0 2rem;
 	}
-
-	// Nested here as this css will be separated from the component
-}
-
-.skill{
-	margin: 1rem 0.4rem;
-
-	.heading{
-		cursor: pointer;
-		padding: 1.6rem 1rem;
-		border: 1px solid #eee;
-		box-shadow: 0 4px 6px -3px rgba(0,0,0,0.3);
-		transition: box-shadow 300ms ease;
-
-		&:hover{
-			box-shadow: 0 4px 8px 0px rgba(0,0,0,0.3);
-		}
-	}
-
-	.skill-icon{
-		float: left;
-		width: 4rem;
-		height: 4rem;
-		border-radius: 100%;
-		border: 0.2rem solid #000;
-		background-color: @crimson;
-
-		svg{
-			width: 3.6rem;
-			height: 3.6rem;
-			padding: 1rem;
-		}
-	}
-
-	h3{
-		float: left;
-		line-height: 4.2rem;
-		margin: 0 1rem;
-	}
-
-	ul{
-		position: relative;
-		overflow: hidden;
-		font-family: consolas, courier, monospace;
-		height: 0;
-		margin: 0;
-		padding: 0;
-		background-color: @blue;
-		border-radius: 4px;
-		opacity: 0;
-		transform: translateY(-3rem);
-		transition: height 100ms ease, transform 200ms ease, opacity 300ms ease;
-
-		&:after{
-			position: absolute;
-			content: '';
-			top: -1.6rem;
-			left: 1.4rem;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 1.6rem 1.6rem 1.6rem;
-			border-color: transparent transparent @blue transparent;
-		}
-
-		li{
-			display: inline-block;
-			margin: 0.4rem;
-			padding: 0.2rem 0.6rem;
-			background-color: #fff;
-			border-radius: 4px;
-		}
-	}
-
-
-	&.active{
-		ul{
-			overflow: initial;
-			height: auto;
-			margin: 2rem 0 0;
-			padding: 1rem;
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
 }
 
 
 
-@media screen and (min-width: 42rem){
+
+@media @size-md{
 	.main-container{
 		display: flex;
 		flex-direction: row;
 		margin-top: 0;
 	}
 
-	.sidebar, .body-container{
-		overflow: auto;
-	}
-
 	.body-container{
+		overflow: auto;
 		flex: 2 1 auto;
-	}
-	.sidebar{
-		flex: 1 1 auto;
-		max-width: 30%;
-	}
-
-
-	.sidebar::before{}
-	.sidebar::after{}
-
-	.sidebar{
-		position: relative;
-		height: 100%;
-		// width: 30rem;
-
-		&:after{
-			position: absolute;
-			content: '';
-			top: 0;
-			right: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 3rem 3rem 0;
-			border-color: transparent #fff transparent transparent;
-		}
-
-		.logo-container, 
-		.logo-container svg{
-			transform: none;
-		}
-		a.sidebar-toggle{
-			display:none;
-		}
-
-		.contacts-container{
-			opacity:1;
-			transform: none;
-
-			.contact{
-				width: 100%;
-			}
-		}
-
-		.logo-container{
-			margin: 2rem 0;
-		}
-	}
-
-	.skills-container{
-		.flex-row{
-			// .skill{
-			// 	margin-left: 1rem;
-			// 	margin-right: 1rem;
-
-			// 	&:first-child, &:last-child{
-			// 		margin-left: 0rem;
-			// 		margin-right: 0rem;
-			// 	}
-			// }
-		}
-
-		// Nested here as this css will be separated from the component
 	}
 }

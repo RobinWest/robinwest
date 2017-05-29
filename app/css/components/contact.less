@@ -1,0 +1,36 @@
+@import '../variables.less';
+
+/* Contact Component */
+
+.contact{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	font-size: 1.2rem;
+	color: #000;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	line-height: 2.6em;
+	margin: 1rem auto;
+	padding: 0 2rem;
+	padding-left: 5rem;
+
+	&:hover{
+		background-color: #fff;
+	}
+
+	svg{
+		position: absolute;
+		top: 16%;
+		left: 2rem;
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+@media @size-md{
+	.contact{
+		width: 100%;
+	}
+}

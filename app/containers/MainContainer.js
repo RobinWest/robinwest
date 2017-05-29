@@ -5,7 +5,6 @@ var SidebarContainer  = require('./SidebarContainer');
 
 var Contact           = require('../components/Contact');
 
-
 class MainContainer extends React.Component {
 	render(){
 		return (
