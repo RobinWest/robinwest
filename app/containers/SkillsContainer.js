@@ -59,12 +59,10 @@ class SkillsContainer extends React.Component {
 	render(){
 		return (
 			<div className="skills-container">
-				<h2>Skills</h2>
-				<div className="flex-row">
-					{this.skills.map(function(skill, index){
-						return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills}>{skill.name}</Skill>;
-					})}
-				</div>
+				{/*<h2>Skills</h2>*/}
+				{this.skills.map(function(skill, index){
+					return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills}>{skill.name}</Skill>;
+				})}
 			</div>
 		);
 	};

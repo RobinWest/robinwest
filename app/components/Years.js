@@ -3,12 +3,18 @@ var React = require('react');
 class Years extends React.Component {
 	constructor(){
 		super();
-		this.year = new Date().toString();
+
+		// I've made this component because I don't want to have to keep updating this copy...
+		// TODO: make this more accurate
+		var start = new Date('2011', '01').getFullYear(),
+			now   = new Date().getFullYear();
+
+		this.years = now - start;
 	};
 
 	render(){
 		return (
-			<span>{this.year}</span>
+			<span>{this.years} years</span>
 		);
 	};
 }

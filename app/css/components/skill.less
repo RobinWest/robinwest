@@ -3,8 +3,12 @@
 /* Skill Component */
 
 .skill{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 	cursor: pointer;
-	padding: 3rem 2rem;
+	padding: 4rem 2rem;
 	background-color: @crimson;
 
 	&.moss{
@@ -50,7 +54,6 @@
 
 		overflow: hidden;
 		max-height: 0;
-		// height: 0;
 		opacity: 0;
 		transform: translateY(-3rem);
 		transition: max-height 100ms ease, transform 200ms ease, opacity 300ms ease;
