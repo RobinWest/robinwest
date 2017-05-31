@@ -16,14 +16,13 @@ class SkillsContainer extends React.Component {
 				icon: <EmbedSlashIcon />,
 				className: 'lake',
 				skills: [
+					'HTML',
+					'CSS',
 					'JavaScript',
 					'React',
 					'AngularJS 1.x',
-					'ES6',
 					'NWJS',
-					'CSS',
-					'LESS',
-					'HTML, of course'
+					'LESS'
 				]
 			},{
 				name: 'Back end',
@@ -32,7 +31,7 @@ class SkillsContainer extends React.Component {
 				skills: [
 					'PHP',
 					'SQL',
-					'Linux CLI',
+					'Linux',
 					'Node.js',
 					'Git',
 					'npm',
@@ -50,7 +49,8 @@ class SkillsContainer extends React.Component {
 					'After Effects',
 					'Sketch',
 					'InVision',
-					'Balsamiq'
+					'Balsamiq',
+					'Pen & Paper'
 				]
 			}
 		];
