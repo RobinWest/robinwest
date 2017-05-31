@@ -14,7 +14,7 @@ class SkillsContainer extends React.Component {
 			{
 				name: 'Front end',
 				icon: <EmbedSlashIcon />,
-				className: 'lake',
+				className: 'crimson',
 				skills: [
 					'HTML',
 					'CSS',
@@ -42,7 +42,7 @@ class SkillsContainer extends React.Component {
 			},{
 				name: 'Design tools',
 				icon: <PaintRollerIcon />,
-				className: 'crimson',
+				className: 'lake',
 				skills: [
 					'Photoshop',
 					'Illustrator',
