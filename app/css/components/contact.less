@@ -8,20 +8,22 @@
 	justify-content: flex-start;
 	align-items: center;
 	overflow: hidden;
-	width: 80%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-decoration: none;
 	font-size: 1.2rem;
 	color: #000;
-	text-decoration: none;
-	text-overflow: ellipsis;
-	line-height: 2.6em;
-	margin: 0 auto;
-	padding: 0.6rem 2rem;
+	// width: 80%;
+	// line-height: 2.6em;
+	// margin: 0 auto;
+	padding: 1.4rem 2rem;
 
 	&:hover{
 		background-color: #fff;
 	}
 
 	svg{
+		flex-shrink: 0;
 		margin-right: 2rem;
 		width: 2rem;
 		height: 2rem;
