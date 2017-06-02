@@ -11,7 +11,6 @@ class SidebarContainer extends React.Component {
 	constructor(props){
 		super(props);
 
-		// For the record, this is preposterous!
 		this.toggleState = this.toggleState.bind(this);
 
 		this.state = {
