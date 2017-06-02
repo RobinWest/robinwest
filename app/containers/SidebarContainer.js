@@ -29,12 +29,15 @@ class SidebarContainer extends React.Component {
 			<div className={`sidebar ${this.state.active ? 'active' : ''}`}>
 				<Logo></Logo>
 
+				<div className="toggle-container">
+					<a className="sidebar-toggle" onClick={this.toggleState}>
+						{!this.state.active && `Contact `}
+						{!this.state.active && <MenuDownIcon />}
+						{this.state.active && <CrossIcon />}
+					</a>
+				</div>
+
 				<ContactsContainer />
-				<a className="sidebar-toggle" onClick={this.toggleState}>
-					{!this.state.active && `Contact `}
-					{!this.state.active && <MenuDownIcon />}
-					{this.state.active && <CrossIcon />}
-				</a>
 			</div>
 		);
 	};

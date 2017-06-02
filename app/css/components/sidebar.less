@@ -3,30 +3,48 @@
 /* Sidebar Component */
 
 .sidebar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	width: 100%;
 	height: 8rem;
 	background-color: lighten(@crimson, 10%);
 	overflow: hidden;
 	transition: min-height 300ms ease, height 300ms ease, background-color 200ms linear;
 
-	a.sidebar-toggle{
+	.toggle-container{
 		position: absolute;
-		top: 1rem;
-		right: 2rem;
-		padding: 0.6rem 1rem;
-		border-radius: 3px;
-		background-color: #fff;
-		cursor: pointer;
+		right: 0;
 
-		svg{
-			margin-bottom: -0.1rem;
-			&.icon-menu-down{
-				margin-left: 0.6rem;
+		a.sidebar-toggle{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-right: 2rem;
+
+			// justify-content: space-between;
+			// position: absolute;
+			// top: 1rem;
+			// right: 2rem;
+			padding: 0.6rem 1rem;
+			border-radius: 3px;
+			background-color: #fff;
+			cursor: pointer;
+
+			svg{
+				&.icon-menu-down{
+					margin-left: 0.6rem;
+				}
 			}
 		}
 	}
 
 	.contacts-container{
+		flex-grow: 1;
+		flex-basis: 100%;
 		opacity: 0;
 		transform: translateY(-3rem);
 		transition: opacity 100ms ease, transform 100ms ease;
@@ -44,6 +62,12 @@
 			transform: translateY(0);
 			opacity: 1;
 		}
+
+		.toggle-container{
+			transform: translateY(-100%);
+		}
+
+
 	}
 }
 
@@ -60,18 +84,19 @@
 		flex: 0 1;
 		// width: 30rem;
 
-		// &:after{
-		// 	position: absolute;
-		// 	content: '';
-		// 	top: 0;
-		// 	right: 0;
-		// 	width: 0;
-		// 	height: 0;
-		// 	border-style: solid;
-		// 	border-width: 0 3rem 3rem 0;
-		// 	border-color: transparent #fff transparent transparent;
-		// }
+		&:after{
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 3rem 3rem 0;
+			border-color: transparent #fff transparent transparent;
+		}
 
+		.toggle-container,
 		a.sidebar-toggle{
 			display:none;
 		}
