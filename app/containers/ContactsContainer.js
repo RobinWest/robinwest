@@ -34,7 +34,7 @@ class ContactsContainer extends React.Component {
 	render(){
 		return (
 			<div className="contacts-container">
-				<h2>Contact</h2>
+				{/*<h2>Contact</h2>*/}
 				{this.contacts.map(function(contact, index){
 					return <Contact key={'contact-' + index} icon={contact.icon} href={contact.href}>{contact.name}</Contact>;
 				})}
