@@ -3,23 +3,22 @@
 /* Logo Component */
 
 .logo-container{
-	flex-grow: 1;
-	// width: 100%;
+	width: 50%;
 	height: 100%;
-	padding: 1rem;
-	margin: 0 2rem;
 	max-height: 14rem;
-	transform: translateX(-50%);
+
+	padding: 1rem;
+
+	transform: translateX(-100%);
 	transition: transform 400ms ease, height 300ms ease;
 
 	svg{
 		display: block;
-		// width: 100%;
 		height: 100%;
 		margin: 0 auto;
 		fill: #000;
-		// transform: translateX(6rem);
-		transform: translateX(50%);
+
+		transform: translateX(100%);
 		transition: transform 400ms ease;
 	}
 }
@@ -36,6 +35,7 @@
 
 @media @size-md{
 	.logo-container {
+		width: 100%;
 		margin: 2rem 0;
 		transform: none;
 

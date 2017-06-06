@@ -4,30 +4,38 @@
 
 .sidebar{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	flex-wrap: wrap;
-	justify-content: space-between;
 
 	width: 100%;
 	height: 8rem;
-	background-color: lighten(@crimson, 10%);
+	background-color: #eee;
 	overflow: hidden;
-	transition: min-height 300ms ease, height 300ms ease, background-color 200ms linear;
+	transition: height 400ms cubic-bezier(0.25, 0.25, 0.25, 1), background 200ms linear;
 
 	.toggle-container{
-		position: absolute;
-		right: 0;
+		transform: translateY(-6rem);
+		width: 8rem;
+		margin: 2rem 0;
+		transition: transform 800ms cubic-bezier(0, 0.7, 0.4, 1);
 
 		a.sidebar-toggle{
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			margin-right: 2rem;
+			justify-content: space-around;
 			padding: 0.6rem 1rem;
 			border-radius: 3px;
 			background-color: #fff;
 			cursor: pointer;
+
+			box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+			transition: box-shadow 300ms ease, transform 300ms ease;
+
+			&:hover{
+				transform: scale(1.01);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+			}
 
 			svg{
 				&.icon-menu-down{
@@ -38,8 +46,8 @@
 	}
 
 	.contacts-container{
-		flex-grow: 1;
-		flex-basis: 100%;
+		overflow: hidden;
+		height: 0;
 		width: 100%;
 		opacity: 0;
 		transform: translateY(-3rem);
@@ -57,10 +65,11 @@
 		.contacts-container{
 			transform: translateY(0);
 			opacity: 1;
+			height: auto;
 		}
 
 		.toggle-container{
-			transform: translateY(-200%);
+			transform: translateY(0);
 		}
 
 
@@ -74,19 +83,19 @@
 	.sidebar{
 		position: relative;
 		overflow: auto;
-		// max-width: 30%;
 		min-width: 22rem;
 		height: 100%;
 		flex: 0 1;
-		// width: 30rem;
 
 		&:after{
 			position: absolute;
 			content: '';
 			top: 0;
 			right: 0;
+
 			width: 0;
 			height: 0;
+
 			border-style: solid;
 			border-width: 0 3rem 3rem 0;
 			border-color: transparent #fff transparent transparent;
@@ -100,6 +109,14 @@
 		.contacts-container{
 			opacity:1;
 			transform: none;
+			height: auto;
 		}
 	}
 }
+
+@media @size-lg{
+	.sidebar{
+		min-width: 33%;
+	}
+}
+
