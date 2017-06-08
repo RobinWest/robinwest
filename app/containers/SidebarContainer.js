@@ -55,15 +55,17 @@ class SidebarContainer extends React.Component {
 	render(){
 		return (
 			<div className={`sidebar ${this.state.active ? 'active' : ''}`}>
-				<Logo></Logo>
-
-				<div className="toggle-container">
-					<a className="sidebar-toggle" onClick={this.toggleState}>
-						{!this.state.active && `Contact `}
-						{!this.state.active && <MenuDownIcon />}
-						{this.state.active && `Close `}
-						{this.state.active && <CrossIcon />}
-					</a>
+				<div className="generic-container">
+					<Logo></Logo>
+					
+					<div className="toggle-container">
+						<a className="sidebar-toggle" onClick={this.toggleState}>
+							{!this.state.active && `Contact `}
+							{!this.state.active && <MenuDownIcon />}
+							{this.state.active && `Close `}
+							{this.state.active && <CrossIcon />}
+						</a>
+					</div>
 				</div>
 
 				<div className="contacts-container">

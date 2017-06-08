@@ -3,19 +3,22 @@
 /* Logo Component */
 
 .logo-container{
-	width: 50%;
+	flex: 1 0 100%;
+
+	// width: 50%;
 	height: 100%;
 	max-height: 14rem;
 
-	padding: 1rem;
 
-	transform: translateX(-100%);
-	transition: transform 400ms ease, height 300ms ease;
+	// padding: 1rem;
+
+	transform: translateX(-50%);
+	transition: flex 400ms ease, transform 400ms ease, height 300ms ease;
 
 	svg{
 		display: block;
 
-		width: 100%;
+		// width: 100%;
 		height: 100%;
 
 		margin: 0 auto;
@@ -30,6 +33,7 @@
 	.logo-container{
 		height: 14rem;
 		transform: translateX(0);
+		flex: 1 0 100%;
 	}
 	.logo-container svg{
 		transform: translateX(0);
