@@ -7,9 +7,16 @@
 	flex-direction: column;
 	justify-content: center;
 
+	flex: 1 1 0;
+	overflow: hidden;
+
+	// min-height: 6rem;
+
 	cursor: pointer;
-	padding: 4rem 2rem;
+	padding: 0rem 2rem;
 	background-color: @crimson;
+
+	transition: flex 300ms ease;
 
 	&.moss{
 		background-color: @moss;
@@ -75,6 +82,8 @@
 	}
 
 	&.active{
+		flex: 1 0 100%;
+
 		ul{
 			max-height: 12rem;
 

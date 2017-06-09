@@ -1,5 +1,7 @@
 @import 'variables.less';
 
+// @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+
 /* main.css */
 
 html {
@@ -19,6 +21,7 @@ html, body, #app, #app > [data-reactroot], .main-container{
 }
 
 body{
+	// font-family: 'Bree Serif', serif;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
 
@@ -56,6 +59,7 @@ hr{
 
 	.body{
 		padding: 1rem 2rem;
+		flex: 1 1 50%;
 	}
 
 	a{
@@ -73,6 +77,13 @@ hr{
 }
 
 .skills-container{
+	display: flex;
+	flex-direction: column;
+
+	flex: 1 1 50%;
+	min-height: 20rem;
+
+
 	h2{
 		padding: 0 2rem;
 	}
@@ -90,12 +101,11 @@ hr{
 
 	.body-container{
 		overflow: auto;
+		// flex: 1 1 auto;
 
 		.scroll-container{
 			overflow: auto;
 			height: 100%;
 		}
-
-		flex: 1 1 auto;
 	}
 }

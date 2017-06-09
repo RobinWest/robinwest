@@ -15,6 +15,7 @@ class SkillsContainer extends React.Component {
 				name: 'Front end',
 				icon: <EmbedSlashIcon />,
 				className: 'crimson',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi officiis fuga porro expedita amet cupiditate voluptas tenetur incidunt commodi, vel exercitationem odio, deserunt natus tempora architecto dolor magnam quae unde.',
 				skills: [
 					'HTML',
 					'CSS',
@@ -28,6 +29,7 @@ class SkillsContainer extends React.Component {
 				name: 'Back end',
 				icon: <TerminalIcon />,
 				className: 'moss',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, voluptate, eum impedit praesentium mollitia dolorum commodi, placeat pariatur sit tenetur facilis repellat debitis consectetur excepturi natus aspernatur ratione deleniti, maxime.',
 				skills: [
 					'PHP',
 					'SQL',
@@ -43,6 +45,7 @@ class SkillsContainer extends React.Component {
 				name: 'Design tools',
 				icon: <PaintRollerIcon />,
 				className: 'lake',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat temporibus dolore, ad, non tempora, voluptas mollitia obcaecati deserunt similique aperiam cum qui delectus. Nesciunt adipisci, dicta inventore velit error!',
 				skills: [
 					'Photoshop',
 					'Illustrator',
@@ -60,7 +63,7 @@ class SkillsContainer extends React.Component {
 		return (
 			<div className="skills-container">
 				{this.skills.map(function(skill, index){
-					return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills}>{skill.name}</Skill>;
+					return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills} text={skill.text}>{skill.name}</Skill>;
 				})}
 			</div>
 		);

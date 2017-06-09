@@ -28,6 +28,7 @@ class Contact extends React.Component {
 					<h3>{this.props.children}</h3>
 				</div>
 
+				{/*<p>{this.props.text}</p>*/}
 				<ul>
 					{this.props.skills.map(function(skill, index){
 						return <li key={'skill-' + index}>{skill}</li>;
