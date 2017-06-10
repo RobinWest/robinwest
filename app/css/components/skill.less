@@ -3,6 +3,8 @@
 /* Skill Component */
 
 .skill{
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -18,11 +20,52 @@
 
 	transition: flex 300ms ease;
 
+	&.active{
+		flex: 1 0 100%;
+		cursor: initial;
+	}
+
 	&.moss{
 		background-color: @moss;
 	}
 	&.lake{
 		background-color: @lake;
+	}
+
+	.skill-close{
+		cursor: pointer;
+
+		position: absolute;
+		top: 3rem;
+		right: 2rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 4rem;
+		height: 4rem;
+
+		background-color: #fff;
+		border-radius: 100%;
+
+		transform: translateX(3rem);
+		visibility: hidden;
+		opacity: 0;
+
+		box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+		transition: transform 300ms ease, opacity 200ms linear, box-shadow 300ms ease;
+
+		&:hover{
+			box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+		}
+	}
+	&.active{
+		.skill-close{
+			visibility: visible;
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
 	.heading{
@@ -54,20 +97,29 @@
 		border-bottom: 2px solid #000;
 	}
 
-	ul{
+	.skill-body{
 		overflow: hidden;
 		max-height: 0;
+		
+		opacity: 0;
+		transform: translateY(-3rem);
+		transition: max-height 100ms ease, transform 200ms ease, opacity 300ms ease;
+	}
+	&.active{
+		.skill-body{
+			max-height: 100%;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
+	ul{
 		margin: 0;
 		padding: 0;
 
 		cursor: initial;
 		list-style: none;
 		font-family: consolas, courier, monospace;
-
-		opacity: 0;
-		transform: translateY(-3rem);
-		transition: max-height 100ms ease, transform 200ms ease, opacity 300ms ease;
 
 		li{
 			display: inline-block;
@@ -78,22 +130,13 @@
 			background-color: #fff;
 			border-radius: 4px;
 		}
-
 	}
-
 	&.active{
-		flex: 1 0 100%;
-
 		ul{
-			max-height: 12rem;
-
 			margin-top: 1rem;
 			padding-top: 1rem;
 
 			border-top: 1px solid #fff;
-
-			opacity: 1;
-			transform: translateY(0);
 		}
 	}
 }

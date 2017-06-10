@@ -2,12 +2,15 @@ var React = require('react');
 
 require('../css/components/skill.less');
 
+var CrossIcon     = require('./icons/CrossIcon');
+
 class Contact extends React.Component {
 	constructor(props){
 		super(props);
 
-		// For the record, this is preposterous!
 		this.toggleState = this.toggleState.bind(this);
+		this.activateSkill = this.activateSkill.bind(this);
+		this.deactivateSkill = this.deactivateSkill.bind(this);
 
 		this.state = {
 			active: false
@@ -20,20 +23,46 @@ class Contact extends React.Component {
 		});
 	};
 
+	activateSkill(e){
+		var currentTarget = e.currentTarget;
+
+		currentTarget.scrollIntoView();
+			
+		this.setState({
+			active: true
+		});
+	};
+	deactivateSkill(e){
+		console.log(e);
+		var currentTarget = e.currentTarget;
+		e.stopPropagation();
+
+		console.log(currentTarget);
+
+		this.setState({
+			active: false
+		});
+	};
+
 	render(){
 		return (
-			<div className={`skill ${this.props.className} ${this.state.active ? 'active' : ''}`} onClick={this.toggleState}>
+			<div className={`skill ${this.props.className} ${this.state.active ? 'active' : ''}`} onClick={this.activateSkill}>
 				<div className="heading clearfix">
 					<div className="skill-icon">{this.props.icon}</div>
 					<h3>{this.props.children}</h3>
+					<div className="skill-close" onClick={this.deactivateSkill}>
+						<CrossIcon />
+					</div>
 				</div>
 
-				{/*<p>{this.props.text}</p>*/}
-				<ul>
-					{this.props.skills.map(function(skill, index){
-						return <li key={'skill-' + index}>{skill}</li>;
-					})}
-				</ul>
+				<div className="skill-body">
+					{<p>{this.props.text}</p>}
+					<ul>
+						{this.props.skills.map(function(skill, index){
+							return <li key={'skill-' + index}>{skill}</li>;
+						})}
+					</ul>
+				</div>
 			</div>
 		);
 	};
