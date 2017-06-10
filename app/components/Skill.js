@@ -1,8 +1,11 @@
-var React = require('react');
+var React   = require('react');
+var Scroll  = require('react-scroll');
 
 require('../css/components/skill.less');
 
 var CrossIcon     = require('./icons/CrossIcon');
+
+var animateScroll = Scroll.animateScroll;
 
 class Contact extends React.Component {
 	constructor(props){
@@ -25,19 +28,20 @@ class Contact extends React.Component {
 
 	activateSkill(e){
 		var currentTarget = e.currentTarget;
+		var bodyContainer = document.getElementById('body');
 
-		currentTarget.scrollIntoView();
+		animateScroll.scrollToBottom({containerId: 'body', duration: 300});
+
+		setTimeout(function(){
+			animateScroll.scrollToBottom({duration: 300});
+		}, 300);
 			
 		this.setState({
 			active: true
 		});
 	};
 	deactivateSkill(e){
-		console.log(e);
-		var currentTarget = e.currentTarget;
 		e.stopPropagation();
-
-		console.log(currentTarget);
 
 		this.setState({
 			active: false
@@ -49,7 +53,7 @@ class Contact extends React.Component {
 			<div className={`skill ${this.props.className} ${this.state.active ? 'active' : ''}`} onClick={this.activateSkill}>
 				<div className="heading clearfix">
 					<div className="skill-icon">{this.props.icon}</div>
-					<h3>{this.props.children}</h3>
+					<h2>{this.props.children}</h2>
 					<div className="skill-close" onClick={this.deactivateSkill}>
 						<CrossIcon />
 					</div>

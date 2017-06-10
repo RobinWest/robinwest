@@ -7,7 +7,7 @@ var Years = require('../components/Years');
 class BodyContainer extends React.Component {
 	render(){
 		return (
-			<div className="body-container">
+			<div className="body-container" id="body">
 				<div className="body">
 					<h1>Hi, I'm Robin</h1>
 					<hr/>
