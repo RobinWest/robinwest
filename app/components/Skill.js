@@ -6,6 +6,7 @@ require('../css/components/skill.less');
 var CrossIcon     = require('./icons/CrossIcon');
 
 var animateScroll = Scroll.animateScroll;
+var scrollSpy     = Scroll.scrollSpy;
 
 class Contact extends React.Component {
 	constructor(props){
@@ -14,6 +15,8 @@ class Contact extends React.Component {
 		this.toggleState = this.toggleState.bind(this);
 		this.activateSkill = this.activateSkill.bind(this);
 		this.deactivateSkill = this.deactivateSkill.bind(this);
+
+		// console.log(scrollSpy);
 
 		this.state = {
 			active: false

@@ -1,4 +1,4 @@
-var React = require('react');
+var React  = require('react');
 
 require('../css/components/sidebar.less');
 
@@ -13,7 +13,6 @@ var InstagramIcon = require('../components/icons/InstagramIcon');
 var MailIcon      = require('../components/icons/MailIcon');
 var GithubIcon    = require('../components/icons/GithubIcon');
 var TwitterIcon   = require('../components/icons/TwitterIcon');
-
 
 class SidebarContainer extends React.Component {
 	constructor(props){

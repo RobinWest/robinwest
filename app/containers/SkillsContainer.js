@@ -61,7 +61,7 @@ class SkillsContainer extends React.Component {
 
 	render(){
 		return (
-			<div className="skills-container" id="skills">
+				<div className="skills-container" id="skills">
 				{this.skills.map(function(skill, index){
 					return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills} text={skill.text}>{skill.name}</Skill>;
 				})}

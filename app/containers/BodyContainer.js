@@ -5,9 +5,26 @@ var SkillsContainer = require('./SkillsContainer');
 var Years = require('../components/Years');
 
 class BodyContainer extends React.Component {
+	constructor(props){
+		super(props);
+
+		this.handleScroll = this.handleScroll.bind(this);
+	};
+
+	handleScroll(e){
+		var currentTarget = e.currentTarget,
+			child = currentTarget.firstChild;
+
+		if(currentTarget.scrollTop > child.offsetHeight - 20)
+			console.log('its time'); // TODO, change colour of corner arrow
+
+		console.log(currentTarget.scrollTop);
+		console.log(currentTarget.firstChild.offsetHeight);
+	};
+
 	render(){
 		return (
-			<div className="body-container" id="body">
+			<div className="body-container" id="body" onScroll={this.handleScroll}>
 				<div className="body">
 					<h1>Hi, I'm Robin</h1>
 					<hr/>
