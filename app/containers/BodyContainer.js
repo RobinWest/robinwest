@@ -1,38 +1,54 @@
 var React = require('react');
+var Scroll  = require('react-scroll');
 
 var SkillsContainer = require('./SkillsContainer');
 
-var Years = require('../components/Years');
+var Body = require('../components/Body');
+
+var animateScroll = Scroll.animateScroll;
 
 class BodyContainer extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.handleScroll = this.handleScroll.bind(this);
+		this.handleScroll      = this.handleScroll.bind(this);
+		this.handleActiveSkill = this.handleActiveSkill.bind(this);
 	};
 
 	handleScroll(e){
 		var currentTarget = e.currentTarget,
 			child = currentTarget.firstChild;
 
-		if(currentTarget.scrollTop > child.offsetHeight - 20)
-			console.log('its time'); // TODO, change colour of corner arrow
+		this.props.setCornerArrow(false);
 
-		console.log(currentTarget.scrollTop);
-		console.log(currentTarget.firstChild.offsetHeight);
+		if(currentTarget.scrollTop > child.offsetHeight - 20){
+			this.props.setCornerArrow(true);
+		}
+
+		// console.log(currentTarget.scrollTop);
+		// console.log(currentTarget.firstChild.offsetHeight);
+	};
+
+	handleActiveSkill(color){
+		// var currentTarget = e.currentTarget;
+		var bodyContainer = document.getElementById('body');
+
+		animateScroll.scrollToBottom({containerId: 'body', duration: 300});
+
+		setTimeout(function(){
+			animateScroll.scrollToBottom({duration: 300});
+		}, 300);
+
+		this.props.setActiveSkill(color);
 	};
 
 	render(){
 		return (
 			<div className="body-container" id="body" onScroll={this.handleScroll}>
-				<div className="body">
-					<h1>Hi, I'm Robin</h1>
-					<hr/>
-					<p>I'm a web developer specialising in front end and UX design with <Years /> experience. I am in the lucky minority of people that get to do one of their hobbies for a job! When I'm not at work I like to indulge in my other interests. Watching and playing music, <a href="//www.instagram.com/robinpwest/" target="_blank">drawing things</a>, taking photos, playing computer games or having a beer with my pals.</p>
-
-					<p>I currently live in the south of England and work in London for <a href="//www.kobas.co.uk" target="_blank">Kobas</a>, where I head up their UX and front end development. Take a look at the skills section below to see what I use to get things done. If you like what you see, feel free to get in touch!</p>
-				</div>
-				<SkillsContainer />
+				<Body />
+				<SkillsContainer 
+					setActiveSkill={this.handleActiveSkill}
+				/>
 			</div>
 		);
 	};

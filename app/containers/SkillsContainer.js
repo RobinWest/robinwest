@@ -12,11 +12,12 @@ class SkillsContainer extends React.Component {
 
 		this.skills = [
 			{
+				active: false,
 				name: 'Front end',
 				icon: <EmbedSlashIcon />,
-				className: 'crimson',
+				color: 'crimson',
 				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi officiis fuga porro expedita amet cupiditate voluptas tenetur incidunt commodi, vel exercitationem odio, deserunt natus tempora architecto dolor magnam quae unde.',
-				skills: [
+				tags: [
 					'HTML',
 					'CSS',
 					'JavaScript',
@@ -26,11 +27,12 @@ class SkillsContainer extends React.Component {
 					'LESS'
 				]
 			},{
+				active: false,
 				name: 'Back end',
 				icon: <TerminalIcon />,
-				className: 'moss',
+				color: 'moss',
 				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, voluptate, eum impedit praesentium mollitia dolorum commodi, placeat pariatur sit tenetur facilis repellat debitis consectetur excepturi natus aspernatur ratione deleniti, maxime.',
-				skills: [
+				tags: [
 					'PHP',
 					'SQL',
 					'Linux',
@@ -42,11 +44,12 @@ class SkillsContainer extends React.Component {
 					'Webpack'
 				]
 			},{
+				active: false,
 				name: 'Design tools',
 				icon: <PaintRollerIcon />,
-				className: 'lake',
+				color: 'lake',
 				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat temporibus dolore, ad, non tempora, voluptas mollitia obcaecati deserunt similique aperiam cum qui delectus. Nesciunt adipisci, dicta inventore velit error!',
-				skills: [
+				tags: [
 					'Photoshop',
 					'Illustrator',
 					'After Effects',
@@ -57,14 +60,15 @@ class SkillsContainer extends React.Component {
 				]
 			}
 		];
+
 	};
 
 	render(){
 		return (
 				<div className="skills-container" id="skills">
 				{this.skills.map(function(skill, index){
-					return <Skill key={'skillContainer-' + index} icon={skill.icon} className={skill.className} skills={skill.skills} text={skill.text}>{skill.name}</Skill>;
-				})}
+					return <Skill key={'skill-' + index} skill={skill} setActiveSkill={this.props.setActiveSkill}></Skill>;
+				}, this)}
 			</div>
 		);
 	};

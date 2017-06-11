@@ -149,6 +149,20 @@
 			border-color: transparent #fff transparent transparent;
 		}
 
+		&.arrow-active{
+			// transition: border-color 300ms linear;
+
+			&.crimson:after{
+				border-color: transparent @crimson transparent transparent;
+			}
+			&.moss:after{
+				border-color: transparent @moss transparent transparent;
+			}
+			&.lake:after{
+				border-color: transparent @lake transparent transparent;
+			}
+		}
+
 		.generic-container{
 			max-height: 50%;
 			height: auto;

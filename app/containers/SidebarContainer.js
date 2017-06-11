@@ -53,7 +53,7 @@ class SidebarContainer extends React.Component {
 
 	render(){
 		return (
-			<div className={`sidebar ${this.state.active ? 'active' : ''}`}>
+			<div className={`sidebar ${this.state.active ? 'active' : ''} ${this.props.skill.color} ${this.props.arrow.active ? 'arrow-active' : ''}`}>
 				<div className="generic-container">
 					<Logo></Logo>
 					
