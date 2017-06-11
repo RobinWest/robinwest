@@ -58,7 +58,7 @@ class MainContainer extends React.Component {
 	// };
 
 	setActiveSkill(color = 'crimson'){
-		console.log(color);
+		// console.log(color);
 
 		this.setState({
 			skill: { color: color }

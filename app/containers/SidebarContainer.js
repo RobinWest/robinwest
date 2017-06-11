@@ -28,18 +28,22 @@ class SidebarContainer extends React.Component {
 			{
 				name: 'contact@robinwest.co.uk',
 				icon: <MailIcon />,
+				newTab: false,
 				href: 'mailto:contact@robinwest.co.uk'
 			},{
 				name: 'Github',
 				icon: <GithubIcon />,
+				newTab: true,
 				href: '//github.com/RobinWest'
 			},{
 				name: 'Twitter',
 				icon: <TwitterIcon />,
+				newTab: true,
 				href: '//twitter.com/_robinpwest'
 			},{
 				name: 'Instagram',
 				icon: <InstagramIcon />,
+				newTab: true,
 				href: '//www.instagram.com/robinpwest/'
 			}
 		];
@@ -69,7 +73,7 @@ class SidebarContainer extends React.Component {
 
 				<div className="contacts-container">
 					{this.contacts.map(function(contact, index){
-						return <Contact key={'contact-' + index} icon={contact.icon} href={contact.href}>{contact.name}</Contact>;
+						return <Contact key={'contact-' + index} contact={contact}></Contact>;
 					})}
 				</div>
 			</div>
