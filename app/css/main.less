@@ -40,6 +40,12 @@ h1,h2,h3,h4,h5{
 
 .main-container{
 }
+@media @size-md{
+	.main-container{
+		display: flex;
+		flex-direction: row;
+	}
+}
 
 .body-container{
 	display: flex;
@@ -67,25 +73,7 @@ h1,h2,h3,h4,h5{
 		}
 	}
 }
-
-.skills-container{
-	display: flex;
-	flex-direction: column;
-
-	flex: 1 0 100%;
-	min-height: 20rem;
-}
-
-
-
-
 @media @size-md{
-	.main-container{
-		display: flex;
-		flex-direction: row;
-		margin-top: 0;
-	}
-
 	.body-container{
 		overflow: auto;
 		// flex: 1 1 auto;
@@ -95,4 +83,12 @@ h1,h2,h3,h4,h5{
 			height: 100%;
 		}
 	}
+}
+
+.skills-container{
+	display: flex;
+	flex-direction: column;
+
+	flex: 1 0 100%;
+	min-height: 20rem;
 }

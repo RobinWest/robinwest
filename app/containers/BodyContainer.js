@@ -24,13 +24,10 @@ class BodyContainer extends React.Component {
 		if(currentTarget.scrollTop > child.offsetHeight - 20){
 			this.props.setCornerArrow(true);
 		}
-
-		// console.log(currentTarget.scrollTop);
-		// console.log(currentTarget.firstChild.offsetHeight);
 	};
 
 	handleActiveSkill(color){
-		// var currentTarget = e.currentTarget;
+		// TODO there's a better way...
 		var bodyContainer = document.getElementById('body');
 
 		animateScroll.scrollToBottom({containerId: 'body', duration: 300});

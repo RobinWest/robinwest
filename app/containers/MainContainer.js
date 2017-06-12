@@ -32,31 +32,6 @@ class MainContainer extends React.Component {
 		});
 	};
 
-	// activateSkill(index, active = true){
-	// 	// var skills = this.state.skills.copy();
-	// 	var skills = this.state.skills.slice(),
-	// 		color  = this.state.arrow.color;
-
-	// 	// TODO change to id
-	// 	// skills.setActive(index);
-
-	// 	skills.map(function(skill, i){
-	// 		skill.active = false;
-
-	// 		if(active && index === i){
-	// 			skill.active = active;
-	// 			color = skill.className;
-	// 		}
-
-	// 		return skill;
-	// 	});
-
-	// 	this.setState({
-	// 		skills: skills,
-	// 		arrow: { active: this.state.arrow.active, color: color }
-	// 	});
-	// };
-
 	setActiveSkill(color = 'crimson'){
 		// console.log(color);
 

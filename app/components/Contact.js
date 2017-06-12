@@ -2,15 +2,13 @@ var React = require('react');
 
 require('../css/components/contact.less');
 
-class Contact extends React.Component {
-	render(){
-		return (
-			<a href={this.props.contact.href} title={this.props.contact.children} target={`${this.props.contact.newTab ? '_blank' : ''}`} className="contact">
-				{this.props.contact.icon}
-				{this.props.contact.name}
-			</a>
-		);
-	};
+const Contact = (props) => {
+	return (
+		<a href={props.contact.href} title={props.contact.children} target={`${props.contact.newTab ? '_blank' : ''}`} className="contact">
+			{props.contact.icon}
+			{props.contact.name}
+		</a>
+	);
 }
 
 module.exports = Contact;
