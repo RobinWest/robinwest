@@ -15,7 +15,7 @@
 	// min-height: 6rem;
 
 	cursor: pointer;
-	padding: 0rem 2rem;
+	padding: 0 2rem;
 	background-color: @crimson;
 
 	transition: flex 300ms ease;
@@ -25,11 +25,23 @@
 		cursor: initial;
 	}
 
+	&.crimson{
+		background-color: @crimson;
+
+		&:hover{
+		}
+	}
 	&.moss{
 		background-color: @moss;
+
+		&:hover{
+		}
 	}
 	&.lake{
 		background-color: @lake;
+
+		&:hover{
+		}
 	}
 
 	.skill-close{
@@ -107,7 +119,11 @@
 		
 		opacity: 0;
 		transform: translateY(-3rem);
-		transition: max-height 100ms ease, transform 200ms ease, opacity 300ms ease;
+		transition: max-height 300ms ease, transform 200ms ease, opacity 300ms ease;
+
+		p{
+			line-height: 1.6rem;
+		}
 	}
 	&.active{
 		.skill-body{

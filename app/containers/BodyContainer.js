@@ -28,6 +28,7 @@ class BodyContainer extends React.Component {
 
 	handleActiveSkill(color){
 		// TODO there's a better way...
+		// TODO also check for active, we don't want to scroll while deactivating.
 		var bodyContainer = document.getElementById('body');
 
 		animateScroll.scrollToBottom({containerId: 'body', duration: 300});

@@ -20,7 +20,7 @@ class SkillsContainer extends React.Component {
 				icon: <EmbedSlashIcon />,
 				color: 'crimson',
 				text: (
-					<p>The user's needs have always been at the forefront of anything I do. This naturally led me to specialise in front end development, marrying my love of design, building things, and interest in human psychology. With front end development moving as fast as it does, it's given me a welcome challenge keeping up to date with the latest technology. I learn quickly, write scalable code using best practices, and ensure that my work is clear, concise and well documented for the next person who comes across it.</p>
+					<p>The user's needs have always been the primary focus of my work. This naturally led me to specialise in front end development, marrying my love of design, building things, and interest in human psychology. With front end development moving as fast as it does, it's given me a welcome challenge keeping up to date with the latest technologies. I learn quickly, write scalable code using best practices, and ensure that my work is clear, concise and well documented for the next person who comes across it - even if that's me!</p>
 					),
 				tags: [
 					'HTML',
@@ -28,6 +28,9 @@ class SkillsContainer extends React.Component {
 					'JavaScript',
 					'React',
 					'AngularJS 1.x',
+					'Karma & Jasmine',
+					'Backbone & Underscore',
+					'jQuery',
 					'NWJS',
 					'LESS'
 				]
