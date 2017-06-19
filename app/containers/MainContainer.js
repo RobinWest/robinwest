@@ -3,49 +3,31 @@ var React             = require('react');
 var BodyContainer     = require('./BodyContainer');
 var SidebarContainer  = require('./SidebarContainer');
 
-var Contact           = require('../components/Contact');
-
 class MainContainer extends React.Component {
 	constructor(){
 		super();
 
-		// this.activateSkill  = this.activateSkill.bind(this);
-		this.setCornerArrow = this.setCornerArrow.bind(this);
+		this.setActiveArrow = this.setActiveArrow.bind(this);
 		this.setActiveSkill = this.setActiveSkill.bind(this);
 
 		this.state = {
-			sidebar: {
-				active: false
-			},
-			skill: {
-				color: 'crimson'
-			},
+			skill: {},
 			arrow: {
 				active: false
 			}
 		};
 	}
 
-	activateSidebar(){
+	setActiveSkill(skill){
 		this.setState({
-			sidebar: { active: true }
+			skill: skill
 		});
 	};
 
-	setActiveSkill(color = 'crimson'){
-		// console.log(color);
-
-		this.setState({
-			skill: { color: color }
-		});
-	};
-
-	setCornerArrow(active = false){
+	setActiveArrow(active = false){
 		this.setState({
 			arrow: { active: active }
 		});
-
-		// console.log(this.state.arrow.active);
 	};
 
 	render(){
@@ -53,13 +35,13 @@ class MainContainer extends React.Component {
 			<div className="main-container">
 				<SidebarContainer
 					arrow={this.state.arrow}
-					skill={this.state.skill}
+					activeSkill={this.state.skill}
 				 />
 				<BodyContainer 
 					arrow={this.state.arrow}
-					skill={this.state.skill}
+					activeSkill={this.state.skill}
 					setActiveSkill={this.setActiveSkill}
-					setCornerArrow={this.setCornerArrow}
+					setActiveArrow={this.setActiveArrow}
 				/>
 			</div>
 		);

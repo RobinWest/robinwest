@@ -19,32 +19,33 @@ class BodyContainer extends React.Component {
 		var currentTarget = e.currentTarget,
 			child = currentTarget.firstChild;
 
-		this.props.setCornerArrow(false);
+		this.props.setActiveArrow(false);
 
+		// Change the arrow color if its reasonably close
 		if(currentTarget.scrollTop > child.offsetHeight - 20){
-			this.props.setCornerArrow(true);
+			this.props.setActiveArrow(true);
 		}
 	};
 
-	handleActiveSkill(color){
-		// TODO there's a better way...
-		// TODO also check for active, we don't want to scroll while deactivating.
-		var bodyContainer = document.getElementById('body');
+	handleActiveSkill(skill){
+		// Only scroll if this is a new skill selection
+		if(skill.id && skill.id !== this.props.activeSkill.id){
+			animateScroll.scrollToBottom({containerId: 'body-container', duration: 300});
 
-		animateScroll.scrollToBottom({containerId: 'body', duration: 300});
+			setTimeout(function(){
+				animateScroll.scrollToBottom({duration: 300});
+			}, 300);
+		}
 
-		setTimeout(function(){
-			animateScroll.scrollToBottom({duration: 300});
-		}, 300);
-
-		this.props.setActiveSkill(color);
+		this.props.setActiveSkill(skill);
 	};
 
 	render(){
 		return (
-			<div className="body-container" id="body" onScroll={this.handleScroll}>
+			<div className="body-container" id="body-container" onScroll={this.handleScroll}>
 				<Body />
 				<SkillsContainer 
+					activeSkill={this.props.activeSkill}
 					setActiveSkill={this.handleActiveSkill}
 				/>
 			</div>

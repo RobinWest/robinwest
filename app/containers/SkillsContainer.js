@@ -10,12 +10,11 @@ class SkillsContainer extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.activateSkill   = this.activateSkill.bind(this);
-		this.deactivateSkill = this.deactivateSkill.bind(this);
+		this.toggleSkill     = this.toggleSkill.bind(this);
 
 		this.skills = [
 			{
-				active: false,
+				id: 1,
 				name: 'Front end',
 				icon: <EmbedSlashIcon />,
 				color: 'crimson',
@@ -35,7 +34,7 @@ class SkillsContainer extends React.Component {
 					'LESS'
 				]
 			},{
-				active: false,
+				id: 2,
 				name: 'Back end',
 				icon: <TerminalIcon />,
 				color: 'moss',
@@ -55,7 +54,7 @@ class SkillsContainer extends React.Component {
 					'AWS & GCE'
 				]
 			},{
-				active: false,
+				id: 3,
 				name: 'Design tools',
 				icon: <PaintRollerIcon />,
 				color: 'lake',
@@ -79,33 +78,17 @@ class SkillsContainer extends React.Component {
 		}
 	};
 
-	// If I were using a more complicated collection I'd make this ID based. Indexes will work for now.
-	activateSkill(e, index){
-		this.skills[index].active = true;
-
-		// Feels like I should be controlling this with state, even though it can work without it.
-		// -- I believe this is because the function that sets the arrow colour is forcing an update on it's children
-		this.setState({skills: this.skills});
-
-		// Set the colour of the arrow to the active skill
-		this.props.setActiveSkill(this.skills[index].color);
-	};
-	deactivateSkill(e, index){
+	toggleSkill(e, skill){
 		e.stopPropagation();
 
-		this.skills[index].active = false;
-
-		this.setState({skills: this.skills});
-
-		// Set the colour of the arrow back to the first skill
-		this.props.setActiveSkill(this.skills[0].color);
+		this.props.setActiveSkill(skill);
 	};
 
 	render(){
 		return (
 				<div className="skills-container" id="skills">
 				{this.state.skills.map(function(skill, index){
-					return <Skill key={'skill-' + index} skill={skill} index={index} activateSkill={this.activateSkill} deactivateSkill={this.deactivateSkill}></Skill>;
+					return <Skill key={'skill-' + index} skill={skill} index={index} active={this.props.activeSkill.id === skill.id ? true : false} toggleSkill={this.toggleSkill}></Skill>;
 				}, this)}
 			</div>
 		);
