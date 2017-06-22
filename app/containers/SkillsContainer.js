@@ -51,7 +51,7 @@ class SkillsContainer extends React.Component {
 					'Gulp',
 					'Grunt',
 					'Webpack',
-					'AWS & GCE'
+					'AWS & GCP'
 				]
 			},{
 				id: 3,
