@@ -1,5 +1,6 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HTMLWebpackPlugin     = require('html-webpack-plugin');
+var ExtractTextPlugin     = require('extract-text-webpack-plugin');
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
@@ -9,6 +10,12 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 var extractLess = new ExtractTextPlugin('./assets/css/styles.less.css');
+
+var FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
+	logo: './app/images/logo.svg',
+	background: '#fff',
+	title: 'Robin West'
+});
 
 module.exports = {
 	entry: {
@@ -45,7 +52,8 @@ module.exports = {
 	},
 	plugins: [
 		HTMLWebpackPluginConfig,
-		extractLess
+		extractLess,
+		FaviconsWebpackPluginConfig
 	],
 	devtool: 'source-map'
 };
