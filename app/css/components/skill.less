@@ -59,12 +59,13 @@
 		background-color: #fff;
 		border-radius: 100%;
 
-		transform: translateX(3rem);
-		visibility: hidden;
-		opacity: 0;
+		.icon.icon-cross{
+			transition: transform 300ms ease;
+			transform: rotate(-45deg);
+		}
 
 		box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-		transition: transform 300ms ease, opacity 200ms linear, box-shadow 300ms ease;
+		transition: box-shadow 300ms ease;
 
 		&:hover{
 			box-shadow: 0 4px 12px rgba(0,0,0,0.4);
@@ -72,9 +73,9 @@
 	}
 	&.active{
 		.skill-close{
-			visibility: visible;
-			opacity: 1;
-			transform: translateX(0);
+			.icon.icon-cross{
+				transform: rotate(0);
+			}
 		}
 	}
 

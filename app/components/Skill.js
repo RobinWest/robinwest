@@ -1,16 +1,16 @@
-var React   = require('react');
+var React = require('react');
 
 require('../css/components/skill.less');
 
-var CrossIcon     = require('./icons/CrossIcon');
+var CrossIcon = require('./icons/CrossIcon');
 
 const Contact = (props) => {
 	return (
-		<div className={`skill ${props.skill.color} ${props.active ? 'active' : ''}`} onClick={(e) => props.toggleSkill(e, props.skill, true)}>
+		<div className={`skill ${props.skill.color} ${props.active ? 'active' : ''}`} onClick={(e) => props.toggleSkill(e, props.skill)}>
 			<div className="heading clearfix">
 				<div className="skill-icon">{props.skill.icon}</div>
 				<h2>{props.skill.name}</h2>
-				<div className="skill-close" onClick={(e) => props.toggleSkill(e, {})}>
+				<div className="skill-close" onClick={(e) => props.toggleSkill(e, props.active ? {} : props.skill)}>
 					<CrossIcon />
 				</div>
 			</div>

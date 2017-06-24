@@ -88,7 +88,7 @@ class SkillsContainer extends React.Component {
 		return (
 				<div className="skills-container" id="skills">
 				{this.state.skills.map(function(skill, index){
-					return <Skill key={'skill-' + index} skill={skill} index={index} active={this.props.activeSkill.id === skill.id ? true : false} toggleSkill={this.toggleSkill}></Skill>;
+					return <Skill key={'skill-' + index} skill={skill} active={this.props.activeSkill.id === skill.id ? true : false} toggleSkill={this.toggleSkill}></Skill>;
 				}, this)}
 			</div>
 		);
