@@ -1,6 +1,7 @@
-var HTMLWebpackPlugin     = require('html-webpack-plugin');
-var ExtractTextPlugin     = require('extract-text-webpack-plugin');
-var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+var HTMLWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+// var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
@@ -9,13 +10,18 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	inject: 'body'
 });
 
+var CopyWebpackPluginConfig = new CopyWebpackPlugin([
+	{ from: __dirname + '/app/favicons', to: 'favicons/', ignore: ['_links.html'] }
+]);
+
 var extractLess = new ExtractTextPlugin('./assets/css/styles.less.css');
 
-var FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
-	logo: './app/images/logo.svg',
-	background: '#fff',
-	title: 'Robin West'
-});
+// This plugin doesn't play well with my Centos server :(
+// var FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
+// 	logo: './app/images/logo.svg',
+// 	background: '#fff',
+// 	title: 'Robin West'
+// });
 
 module.exports = {
 	entry: {
@@ -38,10 +44,6 @@ module.exports = {
 						loader: "less-loader", options: {}
 					}]
 				})
-			// },{
-			// 	test: /\.(woff|woff2|eot|ttf|svg)$/,
-			// 	exclude: /node_modules/,
-			// 	loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
 			}
 
 		]
@@ -52,8 +54,9 @@ module.exports = {
 	},
 	plugins: [
 		HTMLWebpackPluginConfig,
+		CopyWebpackPluginConfig,
 		extractLess,
-		FaviconsWebpackPluginConfig
+		// FaviconsWebpackPluginConfig
 	],
 	devtool: 'source-map'
 };
