@@ -7,7 +7,7 @@ const Body = (props) => {
 		<div className="body">
 			<h1>Hi, I'm Robin</h1>
 			<hr/>
-			<p>I'm a web developer specialising in front end and UX design with <Years /> experience and I'm lucky enough to do one of my hobbies for a job!</p>
+			<p>I'm a web developer specialising in front end and UX design with <Years /> experience and I'm lucky enough to do one of my hobbies for a job.</p>
 
 			<p>I currently live in the south of England and work in London for <a href="//www.kobas.co.uk" target="_blank">Kobas</a>, where I head up their UX and front end development. Take a look at the skills section below to see what I use to get things done. If you'd like to have a chat, feel free to get in touch!</p>
 
