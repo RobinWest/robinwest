@@ -1,13 +1,6 @@
 var React  = require('react');
 
-require('../css/components/sidebar.less');
-
-// var ContactsContainer = require('./ContactsContainer');
-var Logo    = require('../components/Logo');
-var Contact = require('../components/Contact');
-
-var MenuDownIcon  = require('../components/icons/MenuDownIcon');
-var CrossIcon     = require('../components/icons/CrossIcon');
+var Sidebar = require('../components/Sidebar');
 
 var InstagramIcon = require('../components/icons/InstagramIcon');
 var MailIcon      = require('../components/icons/MailIcon');
@@ -57,26 +50,7 @@ class SidebarContainer extends React.Component {
 
 	render(){
 		return (
-			<div className={`sidebar ${this.state.active ? 'active' : ''} ${this.props.activeSkill.color ? this.props.activeSkill.color : ''} ${this.props.arrow.active ? 'arrow-active' : ''}`}>
-				<div className="generic-container">
-					<Logo></Logo>
-					
-					<div className="toggle-container">
-						<a className="sidebar-toggle" onClick={this.toggleState}>
-							{!this.state.active && `Contact `}
-							{!this.state.active && <MenuDownIcon />}
-							{this.state.active && `Close `}
-							{this.state.active && <CrossIcon />}
-						</a>
-					</div>
-				</div>
-
-				<div className="contacts-container">
-					{this.contacts.map(function(contact, index){
-						return <Contact key={'contact-' + index} contact={contact}></Contact>;
-					})}
-				</div>
-			</div>
+			<Sidebar active={this.state.active} toggleState={this.toggleState} arrow={this.props.arrow} activeSkill={this.props.activeSkill} contacts={this.contacts} />
 		);
 	};
 }

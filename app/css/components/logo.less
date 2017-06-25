@@ -11,7 +11,6 @@
 	svg{
 		display: block;
 
-		// width: 100%;
 		height: 100%;
 
 		margin: 0 auto;
@@ -21,18 +20,6 @@
 		transition: transform 400ms ease;
 	}
 }
-
-.active{
-	.logo-container{
-		// height: 14rem;
-		transform: translateX(0);
-		// flex: 1 0 100%;
-	}
-	.logo-container svg{
-		transform: translateX(0);
-	}
-}
-
 @media @size-md{
 	.logo-container {
 		width: 80%;
@@ -45,3 +32,13 @@
 		}
 	}
 }
+
+.active{
+	.logo-container{
+		transform: translateX(0);
+	}
+	.logo-container svg{
+		transform: translateX(0);
+	}
+}
+

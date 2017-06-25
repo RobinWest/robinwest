@@ -13,19 +13,15 @@
 	overflow: hidden;
 	transition: height 400ms cubic-bezier(0.25, 0.25, 0.25, 1), background 200ms linear;
 
-	.generic-container{
+	.upper-container{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		// align-items: center;
-		// flex-wrap: wrap;
-		// flex:1 0 50%;
 
 		flex-grow: 1;
 
 		width: 100%;
 		height: 100%;
-		// max-height: 100%;
 
 		padding: 1rem 2rem;
 
@@ -34,10 +30,8 @@
 
 	.toggle-container{
 		transform: translateX(50%) translateY(-5rem);
-		// width: 8rem;
 		margin: 2rem 0;
 
-		// flex: 1 0 100%;
 		transition: flex 400ms ease, transform 400ms cubic-bezier(0, 0.7, 0.4, 1);
 
 		a.sidebar-toggle{
@@ -51,7 +45,6 @@
 			width: 8rem;
 
 			padding: 0.6rem 1rem;
-			// margin-left: auto;
 			margin: 0 auto;
 
 			border-radius: 3px;
@@ -62,7 +55,6 @@
 			transition: box-shadow 300ms ease, transform 100ms ease;
 
 			&:hover{
-				// transform: scale(1.01) translateX(-50%);
 				box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 			}
 
@@ -96,23 +88,19 @@
 
 	&.active{
 		height: 100%;
-		// min-height: 40%;
 		overflow: auto;
 
-		.generic-container{
+		.upper-container{
 			height: 40%;
-			// max-height: 50%;
 		}
 
 		.contacts-container{
 			transform: translateY(0);
 			opacity: 1;
-			// height: 100%;
 			height: auto;
 		}
 
 		.toggle-container{
-			// flex: 1 0 100%;
 			transform: translateX(0);
 
 			a.sidebar-toggle{
@@ -123,11 +111,7 @@
 
 	}
 }
-
 @media @size-md{
-	.sidebar::before{}
-	.sidebar::after{}
-
 	.sidebar{
 		position: relative;
 		overflow: auto;
@@ -167,7 +151,7 @@
 			}
 		}
 
-		.generic-container{
+		.upper-container{
 			max-height: 50%;
 			height: auto;
 			padding: 3rem 2rem;
@@ -187,12 +171,7 @@
 	}
 }
 
-@media @size-lg{
-	.sidebar{
-		// min-width: 33%;
-	}
-}
-
+// Fix for landscape where 100% isn't enough to fit everything in
 @media @landscape-lt-md{
 	.sidebar{
 		&.active{
