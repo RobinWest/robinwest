@@ -3,6 +3,8 @@
 /* Contact Component */
 
 .contact{
+	position: relative;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -21,8 +23,26 @@
 
 	transition: background 300ms ease;
 
+	&:after{
+		content: '';
+
+		width: 0%;
+
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		border-bottom: 1px solid @crimson;
+		transition: width 400ms ease, border 200ms ease;
+	}
+
 	&:hover{
 		background-color: #fff;
+
+		&:after{
+			width: 100%;
+			border-bottom: 4px solid @crimson;
+		}
 	}
 
 	svg{
@@ -37,5 +57,24 @@
 @media @size-md{
 	.contact{
 		width: 100%;
+	}
+}
+
+// Change the color of the hover underline based on the selected skill
+.sidebar{
+	&.crimson{
+		.contact:after{
+			border-color: @crimson;
+		}
+	}
+	&.moss{
+		.contact:after{
+			border-color: @moss;
+		}
+	}
+	&.lake{
+		.contact:after{
+			border-color: @lake;
+		}
 	}
 }
