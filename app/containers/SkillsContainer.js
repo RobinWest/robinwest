@@ -86,7 +86,7 @@ class SkillsContainer extends React.Component {
 
 	render(){
 		return (
-				<div className="skills-container" id="skills">
+				<div className={`skills-container ${this.props.activeSkill.id ? 'active' : ''}`} id="skills">
 				{this.state.skills.map(function(skill, index){
 					return <Skill key={'skill-' + index} skill={skill} active={this.props.activeSkill.id === skill.id ? true : false} toggleSkill={this.toggleSkill}></Skill>;
 				}, this)}
