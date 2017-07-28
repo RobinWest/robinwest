@@ -39,7 +39,7 @@ class SkillsContainer extends React.Component {
 				icon: <TerminalIcon />,
 				color: 'moss',
 				text: (
-						<p>I beleive that the back end is an important part of the overall user experience and this has driven me to become comfortable with technologies and concepts involved in storing and retreiving data. REST APIs, relational databases, Apache setups and cloud computing consoles are all things I'm used to working with. I am also comfortable setting up and using tooling for front end asset processing, just to make life a little easier for myself and the team.</p>
+						<p>I believe that the back end is an important part of the overall user experience and this has driven me to become comfortable with technologies and concepts involved in storing and retreiving data. REST APIs, relational databases, Apache setups and cloud computing consoles are all things I'm used to working with. I am also comfortable setting up and using tooling for front end asset processing, just to make life a little easier for myself and the team.</p>
 					),
 				tags: [
 					'PHP',
