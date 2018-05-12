@@ -19,7 +19,7 @@ class SkillsContainer extends React.Component {
 				icon: <EmbedSlashIcon />,
 				color: 'crimson',
 				text: (
-					<p>The user's needs have always been the primary focus of my work. This naturally led me to specialise in front end development, marrying my love of design, building things, and interest in human psychology. With front end development moving as fast as it does, it's given me a welcome challenge keeping up to date with the latest technologies. I learn quickly, write scalable code using best practices, and ensure that my work is clear, concise and well documented for the next person who comes across it - even if that's me!</p>
+					<p>The user's needs have always been the primary focus of my work. This naturally led me to specialise in front end development, combining my love of design, building things, and interest in human psychology. With front end development moving as fast as it does, it's given me a welcome challenge keeping up to date with the latest technologies. I learn quickly, write scalable code using best practices, and ensure that my work is clear, concise and well documented for the next person who comes across it - even if that's just future-me!</p>
 					),
 				tags: [
 					'HTML',
@@ -62,13 +62,13 @@ class SkillsContainer extends React.Component {
 					<p>I like to start projects with a sketch session to get different perspectives from as many stakeholders as possible. I then take what I've learned about the problem and try to create a solution by prototyping - either on paper, in code, or using mockup software. Ideally this will be tested on real users before finally putting together any required high-fidelity designs or assets using the Adobe suite or Sketch. This approach helps to separate the interface functionality from the shiny design so that the user's requirements are always kept a priority.</p>
 					),
 				tags: [
+					'Sketch',
+					'Pen & Paper',
 					'Photoshop',
 					'Illustrator',
 					'After Effects',
-					'Sketch',
 					'InVision',
 					'Balsamiq',
-					'Pen & Paper'
 				]
 			}
 		];
