@@ -1,11 +1,7 @@
-import "./App.css";
+import { HomeContainer } from "./containers/HomeContainer/HomeContainer";
 
-function App() {
-  return (
-    <>
-      <p>Hello</p>
-    </>
-  );
-}
+const App = () => {
+  return <HomeContainer />;
+};
 
 export default App;
